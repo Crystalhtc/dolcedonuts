@@ -20,8 +20,8 @@
 
 .navItem {
     margin: 0 4rem;         
-    text-decoration: none;
 }
+
 .navItem a {
     text-decoration: none;   
     color: var(--brown);     
@@ -40,4 +40,9 @@
 .cartIcon {
     width: 36px; 
     height: auto; 
+}
+
+.navItem .activeLink {
+    text-decoration: underline; 
+    color: var(--brown); 
 }
