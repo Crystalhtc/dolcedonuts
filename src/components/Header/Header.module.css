@@ -1,0 +1,43 @@
+.nav {
+    width: 1440px;          
+    height: 160px;          
+    background-color: var(--mint);
+    display: flex;         
+    justify-content: center;  
+    flex-shrink: 0;          
+    margin: auto;
+}
+
+.navList {
+    list-style-type: none;
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+    margin: 0;
+    padding: 0;
+    width: 100%;        
+}
+
+.navItem {
+    margin: 0 4rem;         
+    text-decoration: none;
+}
+.navItem a {
+    text-decoration: none;   
+    color: var(--brown);     
+}
+
+.logoContainer {
+    flex: 0 0 auto;        
+}
+
+.logo {
+    width: 122px;          
+    height: 122px;          
+    object-fit: contain;    
+}
+
+.cartIcon {
+    width: 36px; 
+    height: auto; 
+}
