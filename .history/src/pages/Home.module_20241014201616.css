@@ -1,0 +1,43 @@
+.homeContainer {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.homeBanner {
+    width: 100%; 
+    max-width: 1440px; 
+    height: auto; 
+}
+
+/* About Us Page */
+h1 {
+    text-align: center;
+    color: rgba(101, 80, 48, 1);
+}
+
+hr {
+    height: 1px;
+    width: 20%;
+    background-color: rgba(101, 80, 48, 1);
+    border: none;
+}
+
+.aboutUsImg {
+    border-radius: 20px;
+}
+
+/* Cart */
+
+
+/* Checkout */
+
+
+/* Menu */
+
+
+/* Order */
+
+
+/* Product Details */
+
