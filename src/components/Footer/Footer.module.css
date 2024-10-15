@@ -1,0 +1,66 @@
+.footer {
+    width: 1440px; 
+    height: 312px; 
+    background-color: var(--mint); 
+    padding: 2rem;
+    color: var(--brown);
+    padding-left: 10rem;
+    flex-shrink: 0;          
+    margin: auto;
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.footerBottomContainer {
+    display: flex;
+    margin-top: 3rem;
+    gap: 39rem;
+}
+
+.newsletterSignup input {
+    padding: 20px;
+    width: 230px;
+    border: 1px solid #ccc;
+    background-color: var(--cream);
+    border-radius: 10px;
+}
+
+.signupButton {
+    width: 100px;
+    padding: 20px; 
+    margin-left: 15px; 
+    background-color: var(--cream); 
+    color: var(--brown); 
+    font-weight: bold;
+    border: none; 
+    border-radius: 20px; 
+}
+
+.footerLinks {
+    margin: 20px 0; 
+    display: flex;
+    font-size: large;
+}
+
+.linkList a {
+    color: var(--brown);
+    list-style-type: none; 
+    text-decoration: none;
+}
+
+.linkList li {
+    text-decoration: none;
+    display: inline; 
+    margin: 0 30px; 
+}
+
+.socialMedia img {
+    width: 250px;
+    height: auto; 
+}
+
+
