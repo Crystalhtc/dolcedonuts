@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --mint: #CEDEDC;
@@ -8,10 +9,25 @@
     --brown: #655030;
     --dark-brown: #4C3B22;
 }
-
 body {
-    font-family: 'Arimo', sans-serif;
     margin: 0 auto;
+}
+/* font */
+/* heading, button */
+h1 {
+    font-family: "Noto Serif", serif;
+    color: #655030;
+    font-size: 28pt;
+}
+/* subheading */
+h2 {
+    font-size: 24pt;
+    font-family: 'Arimo', sans-serif;
+}
+/* paragraph */
+p {
+    font-family: 'Arimo', sans-serif;
+    color: #655030;
 }
 
 .container {
