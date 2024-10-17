@@ -1,0 +1,15 @@
+.container {
+    width: 340px;
+    height: 530px;
+    border-radius: 8px;
+    padding: 18px 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.priceAndButton {
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+}
