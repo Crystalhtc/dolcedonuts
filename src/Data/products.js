@@ -1,13 +1,15 @@
 export const products = [
     // assort
     {
+        id: 101,
         name: "Box of 10 donuts",
         price: 3.15,
         category: "assorted",
         image_url: "menu/assorted-10.png",
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
-    {
+    {   
+        id: 102,
         name: "Box of 6 donuts",
         price: 3.15,
         category: "assorted",
@@ -15,6 +17,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 103,
         name: "Custom Donut",
         price: 3.15,
         category: "assorted",
@@ -23,6 +26,7 @@ export const products = [
     },
     // donuts
     {
+        id: 201,
         name: "Confetti Dream",
         price: 3.15,
         category: "donuts",
@@ -30,6 +34,7 @@ export const products = [
         description: "This vibrant treat features a delightful blend of colorful sprinkles atop a fluffy vanilla donut, offering a whimsical crunch and sweetness that makes every bite a celebration.",
     },
     {
+        id: 202,
         name: "Holly Jolly",
         price: 3.15,
         category: "donuts",
@@ -37,6 +42,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 203,
         name: "Lemon Sunshine",
         price: 3.15,
         category: "donuts",
@@ -44,6 +50,7 @@ export const products = [
         description: "Brighten your day with this refreshing lemon-infused donut, glazed with zesty lemon icing that offers a burst of citrus flavor and a hint of sweetness in every bite.",
     },
     {
+        id: 204,
         name: "Peanut Butter",
         price: 3.15,
         category: "donuts",
@@ -51,6 +58,7 @@ export const products = [
         description: "Indulge in this creamy peanut butter donut, drizzled with rich chocolate glaze that creates the perfect harmony of nutty and sweet flavors for peanut butter lovers.",
     },
     {
+        id: 205,
         name: "Butterscotch",
         price: 3.15,
         category: "donuts",
@@ -58,6 +66,7 @@ export const products = [
         description: "Savor the warm, nostalgic flavors of this butterscotch donut, generously coated with a smooth butterscotch glaze that brings a touch of sweetness to your day.",
     },
     {
+        id: 206,
         name: "Oreo",
         price: 3.15,
         category: "donuts",
@@ -65,6 +74,7 @@ export const products = [
         description: "Experience the classic taste of cookies and cream with this Oreo donut, featuring crushed Oreos sprinkled on top of a rich chocolate glaze for an irresistible treat.",
     },
     {
+        id: 207,
         name: "Caramel Twist",
         price: 3.15,
         category: "donuts",
@@ -72,6 +82,7 @@ export const products = [
         description: "Delight in this caramel-topped donut, swirled with creamy caramel drizzle and finished with a sprinkle of sea salt for a sweet and savory flavor experience.",
     },
     {
+        id: 208,
         name: "Lavender Love",
         price: 3.15,
         category: "donuts",
@@ -79,6 +90,7 @@ export const products = [
         description: "Enjoy the calming essence of this lavender-infused donut, lightly glazed and adorned with edible lavender petals, offering a unique and fragrant taste sensation.",
     },
     {
+        id: 209,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -86,6 +98,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 210,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -93,6 +106,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 211,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -100,6 +114,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 212,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -107,6 +122,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 213,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -114,6 +130,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 214,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -121,6 +138,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 215,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -128,6 +146,7 @@ export const products = [
         description: "This delectable treat boasts a sumptuous strawberry-flavored glaze, generously adorned with coconut flakes for a perfect blend of fruity sweetness and exotic crunch. Elevate your taste buds with every bite of this delightful and unique flavor combination.",
     },
     {
+        id: 216,
         name: "Donuts",
         price: 3.15,
         category: "donuts",
@@ -136,6 +155,7 @@ export const products = [
     },
     // bakery
     {
+        id: 301,
         name: "Chocolate Chip Cookie",
         price: 3.15,
         category: "bakery",
@@ -143,6 +163,7 @@ export const products = [
         description: "This classic cookie is packed with gooey chocolate chips, providing the perfect balance of chewy and crunchy textures that will remind you of home-baked goodness.",
     },
     {
+        id: 302,
         name: "Ginger Cookie",
         price: 3.15,
         category: "bakery",
@@ -150,6 +171,7 @@ export const products = [
         description: "Warm up with this spiced ginger cookie, featuring a delightful blend of ginger and cinnamon for a comforting treat that’s both soft and flavorful.",
     },
     {
+        id: 303,
         name: "Chocolate Cookie",
         price: 3.15,
         category: "bakery",
@@ -157,6 +179,7 @@ export const products = [
         description: "Indulge in this rich chocolate cookie, decadently deep in flavor and perfectly baked to give you a delightful chocolate experience with every bite.",
     },
     {
+        id: 304,
         name: "Linzer Cookie",
         price: 3.15,
         category: "bakery",
@@ -164,6 +187,7 @@ export const products = [
         description: "Enjoy a taste of tradition with this Linzer cookie, filled with sweet raspberry jam and dusted with powdered sugar for a lovely, elegant treat.",
     },
     {
+        id: 305,
         name: "Custard Tart",
         price: 3.15,
         category: "bakery",
@@ -171,6 +195,7 @@ export const products = [
         description: "This delicate custard tart boasts a creamy, smooth filling encased in a buttery pastry crust, offering a rich and satisfying dessert experience.",
     },
     {
+        id: 306,
         name: "Croissant",
         price: 3.15,
         category: "bakery",
@@ -178,6 +203,7 @@ export const products = [
         description: "Experience flaky perfection with this classic croissant, golden and buttery, ideal for breakfast or a delightful snack any time of day.",
     },
     {
+        id: 307,
         name: "Cinnamon Bun",
         price: 3.15,
         category: "bakery",
@@ -185,6 +211,7 @@ export const products = [
         description: "Treat yourself to this indulgent cinnamon bun, drizzled with sweet icing and filled with a warm, gooey cinnamon sugar swirl that’s hard to resist.",
     },
     {
+        id: 308,
         name: "Basque Cheesecake",
         price: 3.15,
         category: "bakery",
@@ -193,6 +220,7 @@ export const products = [
     },
     // drinks
     {
+        id: 401,
         name: "Americano",
         price: 3.15,
         category: "drink",
@@ -200,6 +228,7 @@ export const products = [
         description: "Experience a rich and bold coffee flavor with this Americano, made from freshly brewed espresso and hot water for a smooth and satisfying sip.",
     },
     {
+        id: 402,
         name: "Hazelnut Latte",
         price: 3.15,
         category: "drink",
@@ -207,6 +236,7 @@ export const products = [
         description: "Indulge in the nutty sweetness of this hazelnut latte, perfectly balanced with creamy milk and espresso for a comforting and delicious drink.",
     },
     {
+        id: 403,
         name: "Caramel Macchiato",
         price: 3.15,
         category: "drink",
@@ -214,6 +244,7 @@ export const products = [
         description: "Enjoy the layers of flavor in this caramel macchiato, featuring velvety steamed milk, espresso, and a drizzle of caramel for a sweet finish.",
     },
     {
+        id: 404,
         name: "Mocha Latte",
         price: 3.15,
         category: "drink",
@@ -221,6 +252,7 @@ export const products = [
         description: "Treat yourself to this rich mocha latte, combining the boldness of espresso with luscious chocolate and steamed milk for a decadent coffee experience.",
     },
     {
+        id: 405,
         name: "Cappuccino",
         price: 3.15,
         category: "drink",
@@ -228,6 +260,7 @@ export const products = [
         description: "Savor the classic taste of a cappuccino, crafted with equal parts espresso, steamed milk, and frothy milk foam for a perfectly balanced drink.",
     },
     {
+        id: 406,
         name: "Vanilla Latte",
         price: 3.15,
         category: "drink",
@@ -235,6 +268,7 @@ export const products = [
         description: "Delight in the smooth flavors of this vanilla latte, blending espresso with creamy milk and a hint of vanilla for a sweet and satisfying treat.",
     },
     {
+        id: 407,
         name: "Latte",
         price: 3.15,
         category: "drink",
@@ -242,6 +276,7 @@ export const products = [
         description: "Enjoy the comforting taste of this classic latte, featuring a rich espresso base with steamed milk, perfect for a cozy morning or afternoon pick-me-up..",
     },
     {
+        id: 408,
         name: "Espresso",
         price: 3.15,
         category: "drink",

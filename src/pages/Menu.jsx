@@ -7,19 +7,19 @@ export default function Menu() {
     const donutList = products.map((product, index) => {
         return(
             product.category === 'donuts' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
         )
     })
     const bakeryList = products.map((product, index) => {
         return(
             product.category === 'bakery' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
         )
     })
     const drinkList = products.map((product, index) => {
         return(
             product.category === 'drink' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
         )
     })
     // bring to top

@@ -7,25 +7,25 @@ export default function Order() {
     const assortedList = products.map((product, index) => {
         return(
             product.category === 'assorted' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
         )
     })
     const donutList = products.map((product, index) => {
         return(
             product.category === 'donuts' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
         )
     })
     const bakeryList = products.map((product, index) => {
         return(
             product.category === 'bakery' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
         )
     })
     const drinkList = products.map((product, index) => {
         return(
             product.category === 'drink' &&
-                <ProductCard key={index} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
         )
     })
     // bring to top
