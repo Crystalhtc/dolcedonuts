@@ -11,6 +11,7 @@ import About from './pages/About';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import ProductDetails from './pages/ProductDetails';
+import PaymentReview from './pages/PaymentReview';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/paymentreview" element={<PaymentReview />} />
       </Routes>
       <Footer />
     </Router>
