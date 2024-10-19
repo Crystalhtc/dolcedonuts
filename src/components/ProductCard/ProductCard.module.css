@@ -11,5 +11,17 @@
 .priceAndButton {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10em;
+}
+button {
+    width: 95px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    color: var(--brown);
+    background: var(--Cream, #FBF4EF);
+}
+button h2 {
+    margin: 0;
 }

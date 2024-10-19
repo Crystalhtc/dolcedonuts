@@ -9,8 +9,8 @@ export default function ProductCard({ name, price, image_url, showDetails }) {
             </div>
             {showDetails ?
                 <div className={styles.priceAndButton}>
-                    <p>${price}</p>
-                    <button>Details</button>
+                    <h2>${price}</h2>
+                    <button><h2>Details</h2></button>
                 </div>
                 :<div></div>
             }
