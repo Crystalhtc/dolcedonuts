@@ -1,6 +1,15 @@
 import styles from './PaymentReview.module.css'; 
+import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
+import MintButton from "../components/MintButton/MintButton";
 
 export default function PaymentReview() {
+
+    const products = [
+        { id: 1, name: 'Product 1', quantity: 1, price: 2.00 }, // Price in CAD
+        { id: 2, name: 'Product 2', quantity: 1, price: 2.00 },
+        { id: 3, name: 'Product 3', quantity: 1, price: 2.00 },
+    ];
+
     return(
         <div className={styles.reviewContainer}>
             <h1 className={styles.thankyouMsg}>Thank you for your order!</h1>
@@ -25,49 +34,29 @@ export default function PaymentReview() {
                             <td>Credit card</td>
                         </tr>
                     </table>
-                    <div className={styles.continueButton}>
-                        <button>Continue Shopping</button>
+                    <div className={styles.continueButtonContainer}>
+                        <div className={styles.continueButton}>
+                            <MintButton 
+                                products={products} 
+                                path="/paymentReview" 
+                                buttonText="Continue Shopping" 
+                            />
+                        </div>
+                        
                     </div>
                 </div>
                 <div className={styles.orderSummary}>
                     <h1>Your order:</h1>
                     <div className={styles.productList}>
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="" alt="product" />
-                            </div>
-                            <div className={styles.productInfo}>
-                                <p className={styles.productName}>Product name</p>
-                                <p>Quantity: 1</p>
-                            </div>
-                            <div className={styles.productPrice}>
-                                <p>CA$2.00</p>
-                            </div>
-                        </div>
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="" alt="product" />
-                            </div>
-                            <div className={styles.productInfo}>
-                                <p className={styles.productName}>Product name</p>
-                                <p>Quantity: 1</p>
-                            </div>
-                            <div className={styles.productPrice}>
-                                <p>CA$2.00</p>
-                            </div>
-                        </div>
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="" alt="product" />
-                            </div>
-                            <div className={styles.productInfo}>
-                                <p className={styles.productName}>Product name</p>
-                                <p>Quantity: 1</p>
-                            </div>
-                            <div className={styles.productPrice}>
-                                <p>CA$2.00</p>
-                            </div>
-                        </div>
+                    {products.map(product => (
+                        <CheckoutProductCard 
+                            key={product.id}
+                            imageSrc="" // Add the image source URL here
+                            productName={product.name} 
+                            quantity={product.quantity} 
+                            price={`CA$${product.price.toFixed(2)}`} 
+                        />
+                    ))}
                     </div>
                     <div className={styles.priceSummary}>
                         <div className={styles.subtotal}>

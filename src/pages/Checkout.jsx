@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Checkout.module.css';
 import AddressInput from "../components/AddressInput/AddressInput"
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
+import MintButton from "../components/MintButton/MintButton";
 import { NavLink } from 'react-router-dom';
 
 export default function Checkout() {
@@ -167,6 +168,10 @@ export default function Checkout() {
                         />
                     ))}
                 </div>
+                <div className={styles.discountCode}>
+                    <input className={styles.discountInput} type="text" name="discount" placeholder="Discount code" onChange={handleInputChange} autoComplete="off" />
+                    <button className={styles.discountButton}>Apply</button>
+                </div>
                 <div className={styles.price}>
                     <div className={styles.subtotal}>
                         <p>Subtotal:</p>
@@ -185,12 +190,11 @@ export default function Checkout() {
                 {/* Pay Now Button */}
                 <div className={styles.payNowContainer}>
                     <div className={styles.payButton}>
-                        <NavLink
-                            to="/paymentReview"
-                            className={styles.payNowLink}
-                        >
-                            Pay Now
-                        </NavLink>
+                        <MintButton 
+                            products={products} 
+                            path="/paymentReview" 
+                            buttonText="Pay Now" 
+                        />
                     </div>
                 </div>
             </div>
