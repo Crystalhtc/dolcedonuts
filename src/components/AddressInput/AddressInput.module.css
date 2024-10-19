@@ -1,0 +1,47 @@
+.fullWidthInput input {
+    width: 100%;
+}
+
+.halfWidthInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstHalfInput {
+    width: 100%;
+}
+
+.secondHalfInput {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.firstHalfInput input {
+    width: 90%;
+}
+
+.secondHalfInput input {
+    width: 90%;
+}
+
+.halfWidthInputField input {
+    width: 50%
+}
+
+.paymentInputs > div {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Billing Address Section */
+.addressInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.addressInputs > div {
+    display: flex;
+    gap: 1rem;
+}
