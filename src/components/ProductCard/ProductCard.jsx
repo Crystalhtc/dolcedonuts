@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 export default function ProductCard({ name, price, image_url, showDetails, id }) {
     const navigate = useNavigate();
     function handleDetailsClick() {
-        navigate(`/ProductDetails/${id}`);
+        // navigate(`/ProductDetails/${id}`);
+        navigate(`/ProductDetails`);
     }
     return(
         <div className={styles.container}>
