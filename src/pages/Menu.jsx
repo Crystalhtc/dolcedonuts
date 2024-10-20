@@ -4,24 +4,16 @@ import './Order.css'
 
 export default function Menu() {
 
-    const donutList = products.map((product, index) => {
+    function productList(category) {
         return(
-            product.category === 'donuts' &&
-                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
+            products
+                .filter(product => product.category === category)
+                .map((product, index) => {
+                    return <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                })
         )
-    })
-    const bakeryList = products.map((product, index) => {
-        return(
-            product.category === 'bakery' &&
-                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
-        )
-    })
-    const drinkList = products.map((product, index) => {
-        return(
-            product.category === 'drink' &&
-                <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
-        )
-    })
+    }
+
     // bring to top
     function scrollToTop() {
         window.scrollTo({
@@ -56,17 +48,17 @@ export default function Menu() {
 
             <div id="donuts" className="sectionTitle"><h1>Donuts</h1></div>
             <div className="innerContainer">
-                {donutList}
+                {productList("donut")}
             </div>
 
             <div id="bakery" className="sectionTitle"><h1>Bakery</h1></div>
             <div className="innerContainer">
-                {bakeryList}
+                {productList("bakery")}
             </div>
 
             <div id="drinks" className="sectionTitle"><h1>Drinks</h1></div>
             <div className="innerContainer">
-                {drinkList}
+                {productList("drink")}
             </div>
         </div>
     )
