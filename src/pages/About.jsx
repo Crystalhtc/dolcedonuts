@@ -1,4 +1,5 @@
 import styles from './About.module.css'
+import aboutImage from '../assets/about.png';
 
 export default function About() {
     return(
@@ -9,7 +10,7 @@ export default function About() {
                 <div className={styles.aboutUsContainer}>
                     <div style={{ textAlign: 'center' }}>
                         <img 
-                            src="src/assets/about.png"
+                            src={ aboutImage }
                             alt="Women wearing an apron" 
                             className={styles.aboutUsImg}
                             width={850}

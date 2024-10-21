@@ -1,6 +1,9 @@
 import { useState } from "react";
 import styles from "./Cart.module.css";
 import MintButton from "../components/MintButton/MintButton";
+import Donut1 from '../assets/Donut1.png';
+import Donut2 from '../assets/Donut2.png';
+import LinzerCookie from '../assets/LinzerCookie.png';
 
 export default function Cart() {
     const [quantities, setQuantities] = useState({
@@ -54,7 +57,7 @@ export default function Cart() {
                 {quantities.hollyJolly && (
                     <div className={styles.itemList}>
                         <img
-                            src="src/assets/Donut2.png"
+                            src={ Donut2 }
                             alt="Red glazed donut"
                             className={styles.donutImg}
                             width={180}
@@ -76,7 +79,7 @@ export default function Cart() {
                 {quantities.customDonut && (
                     <div className={styles.itemList}>
                         <img
-                            src="src/assets/Donut1.png"
+                            src= { Donut1 }
                             alt="Chocolate glazed donut"
                             className={styles.donutImg}
                             width={180}
@@ -98,7 +101,7 @@ export default function Cart() {
                 {quantities.linzerCookie && (
                     <div className={styles.itemList}>
                         <img
-                            src="src/assets/LinzerCookie.png"
+                            src= { LinzerCookie }
                             alt="Heart butter cookie"
                             className={styles.donutImg}
                             width={180}
