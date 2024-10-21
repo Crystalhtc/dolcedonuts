@@ -1,0 +1,9 @@
+.cartH2 {
+    font-family: "Noto Serif", serif;
+}
+
+.itemList {
+    background-color: var(--cream);
+    border-color: black;
+    border-style: solid;
+}
