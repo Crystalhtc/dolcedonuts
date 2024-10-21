@@ -283,4 +283,8 @@ export const products = [
         image_url: "menu/espresso.png",
         description: "For the coffee purists, this espresso offers a concentrated shot of bold coffee flavor, served straight for an intense and satisfying experience.",
     },
-]
+].map(product => ({
+    ...product,
+    image_url: `/${product.image_url}`
+}));
+
