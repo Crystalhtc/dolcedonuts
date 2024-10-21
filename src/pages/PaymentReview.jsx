@@ -38,7 +38,7 @@ export default function PaymentReview() {
                         <div className={styles.continueButton}>
                             <MintButton 
                                 products={products} 
-                                path="/paymentReview" 
+                                path="/" 
                                 buttonText="Continue Shopping" 
                             />
                         </div>
