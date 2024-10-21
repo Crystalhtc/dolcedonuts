@@ -121,7 +121,10 @@ export default function Cart() {
             <div className={styles.totalContainer}>
                 <h2 className={styles.totalH2}>Subtotal: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CA ${calculateTotal()}</h2>
                 <div className={styles.checkoutBtn} style={{ width: '240px' }}>
-                    <MintButton buttonText="Checkout" />
+                    <MintButton 
+                        path="/checkout" 
+                        buttonText="Checkout" 
+                    />
                 </div>
 
             </div>
