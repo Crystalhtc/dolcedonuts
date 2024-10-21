@@ -13,7 +13,7 @@ export default function About() {
                             alt="Women wearing an apron" 
                             className={styles.aboutUsImg}
                             width={850}
-                            height={470}123 
+                            height={470} 
                         />
                     </div>
                     <br/>

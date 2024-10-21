@@ -1,0 +1,17 @@
+.contactUsContainer {
+    text-align: center;
+}
+
+.locationOne { 
+    display: flex;
+}
+.contactUsText} {
+    text-align: left;
+}
+
+.contactUsCard {
+    background-color: var(--cream);
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem;
+}

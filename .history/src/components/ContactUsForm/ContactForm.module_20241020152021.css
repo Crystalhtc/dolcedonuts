@@ -1,0 +1,23 @@
+.form {
+    justify-content: left;
+    text-align: left;
+}
+.formPlaceholdersName {
+    display: flex;
+}
+
+.contactFormContainer {
+    text-align: center;
+}
+
+.nameFieldContainer {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--mint);
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}

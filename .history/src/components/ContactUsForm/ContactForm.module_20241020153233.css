@@ -1,0 +1,45 @@
+.form {
+    justify-content: left;
+    text-align: left;
+}
+.formPlaceholdersName {
+    display: flex;
+}
+
+.contactFormContainer {
+    text-align: center;
+}
+
+.nameFieldContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.inputWidth{
+    width: 170px;
+    border-radius: 10px;
+}
+
+.emailPlaceholder {
+    width: 388px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+.messagePlaceholder {
+    padding-top: ;
+    width: 388px;
+}
+
+form {
+    background-color: var(--mint);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    padding-top: 10px;
+    border-radius: 20px;
+}

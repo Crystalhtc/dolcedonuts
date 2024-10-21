@@ -1,0 +1,18 @@
+button {
+    background-color: var(--cream);
+    color: var(--brown);
+    width: ;
+}
+
+button:hover {
+    background-color: var(--brown);
+    color: var(--cream);
+}
+
+h2:hover {
+    color: var(--cream);
+}
+
+div {
+    padding-bottom: 10px;
+}

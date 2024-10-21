@@ -1,0 +1,9 @@
+button {
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+button:hover {
+    background-color: var(--brown);
+    color: ;
+}
