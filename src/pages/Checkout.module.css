@@ -263,3 +263,177 @@ h2 {
         flex-direction: column;
     }
 }
+
+/* Tablet (768x1024) */
+@media screen and (max-width: 1024px) {
+    .checkoutContainer {
+        gap: 2rem;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .leftColumn {
+        flex: 3;
+    }
+
+    .rightColumn {
+        flex: 2;
+    }
+
+    .deliveryToggle {
+        width: 80%;
+    }
+
+    .halfWidthInput {
+        flex-direction: column;
+    }
+
+    .firstHalfInput,
+    .secondHalfInput {
+        width: 100%;
+    }
+
+    .firstHalfInput input,
+    .secondHalfInput input {
+        width: 100%;
+    }
+
+    .addresses {
+        gap: 0.75rem;
+    }
+
+    .downtown, 
+    .mountPleasant {
+        padding: 0.75rem;
+    }
+
+    /* Adjust input sizes */
+    input {
+        padding: 0.875rem;
+    }
+}
+
+/* Mobile (360x800) */
+@media screen and (max-width: 767px) {
+    .checkoutContainer {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+        margin: 0;
+    }
+
+    .leftColumn,
+    .rightColumn {
+        width: 100%;
+    }
+
+    .rightColumn {
+        padding: 1rem 0;
+        border-left: none;
+        border-top: 1px solid var(--brown);
+    }
+
+    /* Contact section adjustments */
+    .contactInputs {
+        gap: 0.75rem;
+    }
+
+    /* Delivery section adjustments */
+    .deliveryToggle {
+        width: 100%;
+        margin: 0.75rem 0;
+    }
+
+    .deliveryToggle button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Payment section adjustments */
+    .paymentContainer {
+        margin: 0.75rem 0;
+    }
+
+    .paymentInputs {
+        gap: 0.75rem;
+    }
+
+    /* Address section adjustments */
+    .addresses {
+        gap: 0.75rem;
+    }
+
+    .downtown,
+    .mountPleasant {
+        font-size: 0.9rem;
+    }
+
+    /* Checkout products adjustments */
+    .checkoutProducts {
+        gap: 0.75rem;
+    }
+
+    /* Discount code section */
+    .discountCode {
+        flex-direction: column;
+        height: auto;
+        gap: 0.75rem;
+    }
+
+    .discountInput {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .discountButton {
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    /* Price section adjustments */
+    .price {
+        margin-bottom: 1.5rem;
+    }
+
+    .subtotal,
+    .tax,
+    .total {
+        padding: 0.5rem 0;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 359px) {
+    .checkoutContainer {
+        padding: 0.5rem;
+    }
+
+    input {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .deliveryToggle button {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}

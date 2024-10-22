@@ -6,6 +6,7 @@ import cardImage3 from '../assets/home-card-img-3.png';
 import cardImage4 from '../assets/home-card-img-4.png';
 import cardImage5 from '../assets/home-card-img-5.png';
 import styles from './Home.module.css'; 
+import { NavLink } from 'react-router-dom';
 
 const cardData = [
     { 
@@ -90,7 +91,13 @@ export default function Home() {
                         />
                         <div className={styles.cardContent}>
                             <p>{card.text}</p>
-                            <a href={card.link} className={styles.ctaButton}>{card.button}</a>
+                            {/* <a href={card.link} className={styles.ctaButton}>{card.button}</a> */}
+                            <NavLink
+                                to={card.link}
+                                className={styles.ctaButton}
+                            >
+                                {card.button}
+                            </NavLink>
                         </div>
                     </div>
                 ))}

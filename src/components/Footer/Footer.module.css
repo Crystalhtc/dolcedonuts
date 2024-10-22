@@ -1,6 +1,6 @@
 .footer {
-    width: 1440px; 
-    height: 312px; 
+    /* width: 1440px;  */
+    /* height: 312px;  */
     background-color: var(--mint); 
     padding: 2rem;
     color: var(--brown);
@@ -13,24 +13,31 @@
     display: flex;
     align-items: center;
     gap: 10rem;
+    justify-content: space-between;
+    gap: 4rem;
 }
 
 .footerBottomContainer {
     display: flex;
     margin-top: 3rem;
-    gap: 39rem;
+    justify-content: space-between;
+}
+
+.newsletterSignup {
+    display: flex;
+    align-items: center;
 }
 
 .newsletterSignup input {
     padding: 20px;
-    width: 230px;
+    width: 20vw;
     border: 1px solid #ccc;
     background-color: var(--cream);
     border-radius: 10px;
 }
 
 .signupButton {
-    width: 100px;
+    width: 10vw;
     padding: 20px; 
     margin-left: 15px; 
     background-color: var(--cream); 
@@ -38,6 +45,9 @@
     font-weight: bold;
     border: none; 
     border-radius: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerLinks {
@@ -59,8 +69,103 @@
 }
 
 .socialMedia img {
-    width: 250px;
+    /* width: 250px; */
     height: auto; 
 }
 
 
+@media only screen and (max-width: 1024px) {
+    .footer {
+        width: 100%; 
+        padding-left: 2rem; 
+    }
+
+    .footer h2 {
+        text-align: center;
+    }
+
+    .topContainer {
+        flex-direction: column;
+        gap: 2rem; 
+    }
+
+    .footerBottomContainer {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        gap: 1.5rem; 
+    }
+
+    .newsletterSignup {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletterSignup input {
+        width: 30vw; 
+    }
+
+    .signupButton {
+        width: 15vw; 
+    }
+
+    .footerLinks {
+        font-size: medium; 
+    }
+
+    .footerLinks ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .linkList li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .socialMedia img {
+        width: 150px; 
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        width: 100%; 
+        padding-left: 1rem; 
+    }
+
+    .topContainer {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+
+    .footerBottomContainer {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+
+    .newsletterSignup input {
+        width: 40vw; 
+    }
+
+    .signupButton {
+        width: 20vw; 
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        font-size: small; 
+    }
+
+    .linkList li {
+        display: block;
+        margin: 5px 0; 
+    }
+
+    .socialMedia img {
+        width: 100px; 
+    }
+}
