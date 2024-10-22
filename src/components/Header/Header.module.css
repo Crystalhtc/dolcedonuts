@@ -109,6 +109,8 @@
     .cartIcon {
         width: 24px;
     }
+
+    /* Assuming there's a cart item in the nav */
     .navItem:last-child {
         position: absolute;
         top: 0.75rem;
@@ -141,16 +143,19 @@
     }
 }
 
+/* Adjust heights for nav when menu is expanded on mobile */
 @media screen and (max-width: 767px) {
     .nav.expanded {
         height: auto;
         min-height: 300px;
     }
+
     .nav {
         transition: height 0.3s ease;
     }
 }
 
+/* Prevent layout shifts during transitions */
 @media screen and (min-width: 768px) {
     .nav {
         height: 120px !important;

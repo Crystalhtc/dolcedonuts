@@ -3,7 +3,9 @@ import styles from './Checkout.module.css';
 import AddressInput from "../components/AddressInput/AddressInput"
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
 import MintButton from "../components/MintButton/MintButton";
-import { NavLink } from 'react-router-dom';
+import Donut1 from '../assets/Donut1.png';
+import Donut2 from '../assets/Donut2.png';
+import LinzerCookie from '../assets/LinzerCookie.png';
 
 export default function Checkout() {
     // State to manage delivery options (store pickup or delivery)
@@ -32,13 +34,12 @@ export default function Checkout() {
             ...formData,
             [e.target.name]: e.target.value
         });
-    };const [tax, setTax] = useState(0.72); // Example tax
+    };const [tax, setTax] = useState(0.72); 
 
-    // Sample product data (you can fetch this from an API or a state management store)
     const products = [
-        { id: 1, name: 'Product 1', quantity: 1, price: 2.00 }, // Price in CAD
-        { id: 2, name: 'Product 2', quantity: 1, price: 2.00 },
-        { id: 3, name: 'Product 3', quantity: 1, price: 2.00 },
+        { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
+        { id: 2, name: 'Product 2', quantity: 1, price: 2.00, img: Donut2 },
+        { id: 3, name: 'Product 3', quantity: 1, price: 2.00, img: LinzerCookie },
     ];
 
     // Calculate subtotal
@@ -51,14 +52,14 @@ export default function Checkout() {
         return calculateSubtotal() + tax;
     };
 
-    // Check if all fields are filled for enabling the "Pay Now" button
-    const isFormComplete = () => {
-        const requiredFields = ['fullName', 'contactInfo', 'cardNumber', 'expirationDate', 'securityCode', 'cardName', 'billingCountry', 'billingFirstName', 'billingLastName', 'billingAddress1'];
-        if (isDelivery) {
-            requiredFields.push('deliveryAddress1');
-        }
-        return requiredFields.every(field => formData[field]);
-    };
+    // // Check if all fields are filled for enabling the "Pay Now" button
+    // const isFormComplete = () => {
+    //     const requiredFields = ['fullName', 'contactInfo', 'cardNumber', 'expirationDate', 'securityCode', 'cardName', 'billingCountry', 'billingFirstName', 'billingLastName', 'billingAddress1'];
+    //     if (isDelivery) {
+    //         requiredFields.push('deliveryAddress1');
+    //     }
+    //     return requiredFields.every(field => formData[field]);
+    // };
 
     return (
         <div className={styles.checkoutContainer}>
@@ -161,7 +162,7 @@ export default function Checkout() {
                     {products.map(product => (
                         <CheckoutProductCard 
                             key={product.id}
-                            imageSrc="" // Add the image source URL here
+                            imageSrc={product.img}
                             productName={product.name} 
                             quantity={product.quantity} 
                             price={`CA$${product.price.toFixed(2)}`} 

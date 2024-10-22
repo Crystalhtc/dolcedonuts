@@ -4,8 +4,8 @@ import styles from './CheckoutProductCard.module.css'; // Adjust the import path
 const CheckoutProductCard = ({ imageSrc, productName, quantity, price }) => {
     return (
         <div className={styles.checkoutProductCard}>
-            <div className={styles.productImage}>
-                <img src={imageSrc} alt={productName} />
+            <div>
+                <img src={imageSrc} alt={productName} className={styles.productImage}/>
             </div>
             <div className={styles.productInfo}>
                 <p className={styles.productName}>{productName}</p>

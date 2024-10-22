@@ -1,13 +1,16 @@
 import styles from './PaymentReview.module.css'; 
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
 import MintButton from "../components/MintButton/MintButton";
+import Donut1 from '../assets/Donut1.png';
+import Donut2 from '../assets/Donut2.png';
+import LinzerCookie from '../assets/LinzerCookie.png';
 
 export default function PaymentReview() {
 
     const products = [
-        { id: 1, name: 'Product 1', quantity: 1, price: 2.00 }, // Price in CAD
-        { id: 2, name: 'Product 2', quantity: 1, price: 2.00 },
-        { id: 3, name: 'Product 3', quantity: 1, price: 2.00 },
+        { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
+        { id: 2, name: 'Product 2', quantity: 1, price: 2.00, img: Donut2 },
+        { id: 3, name: 'Product 3', quantity: 1, price: 2.00, img: LinzerCookie },
     ];
 
     return(
@@ -51,7 +54,7 @@ export default function PaymentReview() {
                     {products.map(product => (
                         <CheckoutProductCard 
                             key={product.id}
-                            imageSrc="" // Add the image source URL here
+                            imageSrc={product.img} 
                             productName={product.name} 
                             quantity={product.quantity} 
                             price={`CA$${product.price.toFixed(2)}`} 
