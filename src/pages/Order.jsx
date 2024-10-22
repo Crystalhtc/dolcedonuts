@@ -38,13 +38,13 @@ export default function Order() {
             </div>
             <div className="categories">
                 <button className="category" onClick={() => scrollToSection('donuts')}>
-                    <img className="categoryIcon" src="donut-icon.svg" alt="Link to Donuts section"/><h2>Donuts</h2>
+                    <img src="donut-icon.svg" alt="Link to Donuts section"/><h2>Donuts</h2>
                 </button>
                 <button className="category" onClick={() => scrollToSection('bakery')}>
-                    <img className="categoryIcon" src="bread-icon.svg" alt="Link to Bakery section"/><h2>Bakery</h2>
+                    <img src="bread-icon.svg" alt="Link to Bakery section"/><h2>Bakery</h2>
                 </button>
                 <button className="category" onClick={() => scrollToSection('drinks')}>
-                    <img className="categoryIcon" src="drink-icon.svg" alt="Link to drinks section"/><h2>Drinks</h2>
+                    <img src="drink-icon.svg" alt="Link to drinks section"/><h2>Drinks</h2>
                 </button>
             </div>
             <div className="sectionTitle"><h1>Assorted</h1></div>

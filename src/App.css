@@ -33,16 +33,10 @@ p {
     font-family: 'Arimo', sans-serif;
     color: #655030;
 }
-.contents {
-    /* margin: 0 240px; */
-}
 
 
 /* tablet */
 @media screen and (max-width: 1024px) {
-    .contents {
-        /* margin: 0 32px; */
-    }
     /* heading, button */
     h1 {
         font-size: 24pt;
@@ -54,9 +48,6 @@ p {
   }
 /* mobile */
 @media screen and (max-width: 768px) {
-    .contents {
-        /* margin: 0 16px; */
-    }
     /* heading, button */
     h1 {
         font-size: 20pt;
