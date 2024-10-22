@@ -41,7 +41,7 @@ p {
 /* tablet */
 @media screen and (max-width: 1024px) {
     .contents {
-        margin: 0 32px;
+        /* margin: 0 32px; */
     }
     /* heading, button */
     h1 {
@@ -55,7 +55,7 @@ p {
 /* mobile */
 @media screen and (max-width: 768px) {
     .contents {
-        margin: 0 16px;
+        /* margin: 0 16px; */
     }
     /* heading, button */
     h1 {
