@@ -30,6 +30,22 @@ p {
     font-family: 'Arimo', sans-serif;
     color: #655030;
 }
+/* desktop */
+.contents {
+    margin: 0 240px;
+}
+/* tablet */
+@media screen and (max-width: 1024px) {
+    .contents {
+        margin: 0 32px;
+    }
+  }
+/* mobile */
+@media screen and (max-width: 768px) {
+    .contents {
+        margin: 0 16px;
+    }
+  }
 
 .container {
     max-width: 1440px; 
