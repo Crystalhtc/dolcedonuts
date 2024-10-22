@@ -11,6 +11,7 @@ export default function ProductCard({ name, price, image_url, showDetails, id })
     return (
         <div className={styles.container}>
             <img 
+                className={styles.image}
                 src={image_url}  
                 alt={name}
             />

@@ -9,7 +9,7 @@ export default function Order() {
             products
                 .filter(product => product.category === category)
                 .map((product, index) => {
-                    return <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                    return <ProductCard className="singleCard" key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
                 })
         )
     }
@@ -30,19 +30,21 @@ export default function Order() {
     }
     return(
         <div className="outerContainer">
-            <button onClick={scrollToTop} id="bringToTop"><img src="triangle-icon.svg" alt="Bring to top"/></button>
+            <button onClick={scrollToTop} id="bringToTop">
+                <img src="triangle-icon.svg" alt="Bring to top"/>
+            </button>
             <div>
                 <h1>Our menu</h1>
             </div>
             <div className="categories">
                 <button className="category" onClick={() => scrollToSection('donuts')}>
-                    <img src="donut-icon.svg" alt="Link to Donuts section"/><h2>Donuts</h2>
+                    <img className="categoryIcon" src="donut-icon.svg" alt="Link to Donuts section"/><h2>Donuts</h2>
                 </button>
                 <button className="category" onClick={() => scrollToSection('bakery')}>
-                    <img src="bread-icon.svg" alt="Link to Bakery section"/><h2>Bakery</h2>
+                    <img className="categoryIcon" src="bread-icon.svg" alt="Link to Bakery section"/><h2>Bakery</h2>
                 </button>
                 <button className="category" onClick={() => scrollToSection('drinks')}>
-                    <img src="drink-icon.svg" alt="Link to drinks section"/><h2>Drinks</h2>
+                    <img className="categoryIcon" src="drink-icon.svg" alt="Link to drinks section"/><h2>Drinks</h2>
                 </button>
             </div>
             <div className="sectionTitle"><h1>Assorted</h1></div>

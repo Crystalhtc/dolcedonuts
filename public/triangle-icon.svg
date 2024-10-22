@@ -1,4 +1,21 @@
-<svg width="134" height="99" viewBox="0 0 134 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="66.5372" cy="49.5" rx="49.5372" ry="49.5" fill="#655030"/>
-<path d="M64.7307 23.6727C65.9284 22.2698 68.0964 22.2698 69.2941 23.6727L100.182 59.8543C101.844 61.8015 100.461 64.8022 97.9004 64.8022H36.1244C33.5641 64.8022 32.1804 61.8015 33.8427 59.8543L64.7307 23.6727Z" fill="#FBF4EF"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 99 99">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fbf4ef;
+      }
+
+      .cls-2 {
+        fill: #655030;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <ellipse class="cls-2" cx="49" cy="49.5" rx="49.5" ry="49.5"/>
+      <path class="cls-1" d="M47.2,23.7c1.2-1.4,3.4-1.4,4.6,0l30.9,36.2c1.7,1.9.3,4.9-2.3,4.9H18.6c-2.6,0-3.9-3-2.3-4.9l30.9-36.2Z"/>
+    </g>
+  </g>
 </svg>
