@@ -12,6 +12,9 @@
 body {
     margin: 0 auto;
 }
+
+
+/* desktop */
 /* font */
 /* heading, button */
 h1 {
@@ -30,20 +33,37 @@ p {
     font-family: 'Arimo', sans-serif;
     color: #655030;
 }
-/* desktop */
 .contents {
     margin: 0 240px;
 }
+
+
 /* tablet */
 @media screen and (max-width: 1024px) {
     .contents {
         margin: 0 32px;
+    }
+    /* heading, button */
+    h1 {
+        font-size: 24pt;
+    }
+    /* subheading */
+    h2 {
+        font-size: 20pt;
     }
   }
 /* mobile */
 @media screen and (max-width: 768px) {
     .contents {
         margin: 0 16px;
+    }
+    /* heading, button */
+    h1 {
+        font-size: 20pt;
+    }
+    /* subheading */
+    h2 {
+        font-size: 18pt;
     }
   }
 
