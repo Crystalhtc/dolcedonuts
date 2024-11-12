@@ -1,0 +1,46 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.heading h2{
+  flex: 1;
+  background-color: var( --pink);
+  padding: 2rem;
+}
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modalContent {
+  position: relative;
+  top: 100px;
+  left: 60%;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+}
+.singleItem {
+  border-bottom: 1px solid var(--brown);
+  display: flex;
+  flex-direction: row;
+}
+.singleItem img {
+  width: 70px;
+  height: 70px;
+}
+.subtotal {
+  display: flex;
+  flex-direction: row;
+}

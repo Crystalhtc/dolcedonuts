@@ -4,18 +4,19 @@ import { products } from '../Data/products';
 import styles from './ProductDetails.module.css'; 
 import MintButton from '../components/MintButton/MintButton.jsx';  
 
-export default function ProductDetails() {
+export default function ProductDetails({ addToCart }) {
     const { id } = useParams();
     const product = products.find((item) => item.id === parseInt(id));
     const [quantity, setQuantity] = useState(1);
 
-    const handleQuantityChange = (amount) => {
-        setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount));
-    };
+    function incrementCartItem() {
+        setQuantity((prevQuantity) => prevQuantity + 1);
+    }
+    function decrementCartItem() {
+        setQuantity((prevQuantity) => Math.max(1, prevQuantity - 1));
+    }
 
-    const handleAddToCart = () => {
-        console.log('Add to cart clicked');
-    };
+    const cartTotal = (product.price * quantity).toFixed(2);
 
     if (!product) {
         return <h1>Product Not Found</h1>;
@@ -33,17 +34,17 @@ export default function ProductDetails() {
                 <div className={styles.quantitySection}>
                     <h3>Quantity</h3>
                     <div className={styles.quantitySelector}>
-                        <button onClick={() => handleQuantityChange(-1)}>-</button>
+                        <button onClick={() => decrementCartItem()}>-</button>
                         <span>{quantity}</span>
-                        <button onClick={() => handleQuantityChange(1)}>+</button>
+                        <button onClick={() => incrementCartItem()}>+</button>
                     </div>
                 </div>
 
-                <h3>Subtotal: ${(product.price * quantity).toFixed(2)}</h3>
+                <h3>Subtotal: ${cartTotal}</h3>
 
                 <MintButton 
-                onClick={handleAddToCart}
-                buttonText="Add to Cart" />
+                    onClick={() => addToCart(product, quantity)}
+                    buttonText="Add to Cart" path="#"/>
             </div>
         </div>
     );
