@@ -1,52 +1,29 @@
 import { useState } from "react";
 import styles from "./Cart.module.css";
 import MintButton from "../components/MintButton/MintButton";
-import Donut1 from '../assets/Donut1.png';
-import Donut2 from '../assets/Donut2.png';
-import LinzerCookie from '../assets/LinzerCookie.png';
 
-export default function Cart() {
-    const [quantities, setQuantities] = useState({
-        hollyJolly: 1,
-        customDonut: 1,
-        linzerCookie: 1,
-    });
-
-    const prices = {
-        hollyJolly: 2.00,   
-        customDonut: 4.00,  
-        linzerCookie: 2.00, 
-    };
+export default function Cart({ cart, setCart }) {
 
     const handleAdd = (item) => {
-        setQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [item]: prevQuantities[item] + 1,
-        }));
+        const newCart = new Map(cart);
+        newCart.set(item, (cart.get(item) || 0) + 1);
+        setCart(newCart);
     };
 
     const handleRemove = (item) => {
-        setQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [item]: Math.max(1, prevQuantities[item] - 1),
-        }));
-    };
-
-    const handleRemoveItem = (item) => {
-        setQuantities((prevQuantities) => {
-            const newQuantities = { ...prevQuantities };
-            delete newQuantities[item]; 
-            return newQuantities;
-        });
-    };
-
-    const getTotalPrice = (item) => {
-        return (quantities[item] * prices[item]).toFixed(2);
+        const newCart = new Map(cart);
+        const quantity = cart.get(item) || 0;
+        if (quantity > 1) {
+        newCart.set(item, quantity - 1);
+        } else {
+        newCart.delete(item);
+        }
+        setCart(newCart);
     };
 
     const calculateTotal = () => {
-        return Object.keys(quantities).reduce((total, item) => {
-            return total + quantities[item] * prices[item];
+        return [...cart.entries()].reduce((total, [product, quantity]) => {
+        return total + product.price * quantity;
         }, 0).toFixed(2);
     };
 
@@ -54,71 +31,27 @@ export default function Cart() {
         <div>
             <h2 className={styles.cartH2}>Shopping Cart</h2>
             <div className={styles.listContainer}>
-                {quantities.hollyJolly && (
-                    <div className={styles.itemList}>
-                        <img
-                            src={ Donut2 }
-                            alt="Red glazed donut"
-                            className={styles.donutImg}
-                            width={180}
-                            height={180}
-                        />
-                        <h3 className={styles.cookieName}>Holly Jolly</h3>
-                        <div className={styles.quantityControls}>
-                            <button onClick={() => handleRemove("hollyJolly")}>-</button>
-                            <span>{quantities.hollyJolly}</span>
-                            <button onClick={() => handleAdd("hollyJolly")}>+</button>
-                        </div>
-                        <div className={styles.priceRemove}>
-                            <p className={styles.totalPrice}>CA ${getTotalPrice("hollyJolly")}</p>
-                            <button className={styles.removeBtn} onClick={() => handleRemoveItem("hollyJolly")}>Remove</button>
-                        </div>
+            {[...cart.entries()].map(([product, quantity]) => (
+                <div className={styles.itemList} key={product.id}>
+                    <img
+                        src={product.image_url}
+                        alt={product.name}
+                        className={styles.donutImg}
+                        width={180}
+                        height={180}
+                    />
+                    <h3 className={styles.cookieName}>{product.name}</h3>
+                    <div className={styles.quantityControls}>
+                        <button onClick={() => handleRemove(product)}>-</button>
+                        <span>{quantity}</span>
+                        <button onClick={() => handleAdd(product)}>+</button>
                     </div>
-                )}
-
-                {quantities.customDonut && (
-                    <div className={styles.itemList}>
-                        <img
-                            src= { Donut1 }
-                            alt="Chocolate glazed donut"
-                            className={styles.donutImg}
-                            width={180}
-                            height={180}
-                        />
-                        <h3 className={styles.cookieName}>Custom Donut</h3>
-                        <div className={styles.quantityControls}>
-                            <button onClick={() => handleRemove("customDonut")}>-</button>
-                            <span>{quantities.customDonut}</span>
-                            <button onClick={() => handleAdd("customDonut")}>+</button>
-                        </div>
-                        <div className={styles.priceRemove}>
-                            <p className={styles.totalPrice}>CA ${getTotalPrice("customDonut")}</p>
-                            <button className={styles.removeBtn} onClick={() => handleRemoveItem("customDonut")}>Remove</button>
-                        </div>
+                    <div className={styles.priceRemove}>
+                        <p className={styles.totalPrice}>CA ${(product.price * quantity).toFixed(2)}</p>
+                        <button className={styles.removeBtn} onClick={() => handleRemove(product)}>Remove</button>
                     </div>
-                )}
-
-                {quantities.linzerCookie && (
-                    <div className={styles.itemList}>
-                        <img
-                            src= { LinzerCookie }
-                            alt="Heart butter cookie"
-                            className={styles.donutImg}
-                            width={180}
-                            height={180}
-                        />
-                        <h3 className={styles.cookieName}>Linzer Cookie</h3>
-                        <div className={styles.quantityControls}>
-                            <button onClick={() => handleRemove("linzerCookie")}>-</button>
-                            <span>{quantities.linzerCookie}</span>
-                            <button onClick={() => handleAdd("linzerCookie")}>+</button>
-                        </div>
-                        <div className={styles.priceRemove}>
-                            <p className={styles.totalPrice}>CA ${getTotalPrice("linzerCookie")}</p>
-                            <button className={styles.removeBtn} onClick={() => handleRemoveItem("linzerCookie")}>Remove</button>
-                        </div>
-                    </div>
-                )}
+                </div>
+                ))}
             </div>
 
             <div className={styles.totalContainer}>
