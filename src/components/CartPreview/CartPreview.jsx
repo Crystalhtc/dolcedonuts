@@ -8,27 +8,31 @@ export default function CartPreview({ cart, cartSize, onClose }) {
       }, 0).toFixed(2)
 
     return (
-        <div className={styles.modalBackdrop}>
-            <div className={styles.modalContent}>
+        <div className={styles.modalBackdrop}  onClick={onClose}>
+            <div className={styles.modalContent} 
+                onClick={(e) => e.stopPropagation()}>
                 <div className={styles.heading}>
                     <h2>{cartSize} items</h2>
                     <button className={styles.closeButton} onClick={onClose}>&times;</button>
                 </div>
-                <div>
-                {[...cart.entries()].map(([product, quantity]) => (
-                    <div key={product.id} className={styles.singleItem}>
-                        <img src={product.image_url} alt={product.name} />
-                        <div>
-                            <p>{product.name}</p>
-                            <p>${(product.price * quantity).toFixed(2)}</p>
-                            <p>{quantity}</p>
+                <div className={styles.items}>
+                    {[...cart.entries()].map(([product, quantity]) => (
+                        <div key={product.id} className={styles.singleItem}>
+                            <img src={product.image_url} alt={product.name} />
+                            <div className={styles.info}>
+                                <p>{product.name}</p>
+                                <p>${(product.price * quantity).toFixed(2)}</p>
+                                <p>{quantity}</p>
+                            </div>
                         </div>
+                    ))}
+                    <div className={styles.subtotal}>
+                        <p>Subtotal: </p>
+                        <p>${subtotal}</p>
                     </div>
-                ))}
-                <div className={styles.subtotal}>
-                    <p>Subtotal: ${subtotal}</p>
-                </div>
-                <NavLink to= '/Checkout'>Chackout</NavLink>
+                    <div className={styles.checkoutButtonContainer}>
+                        <NavLink onClick={onClose} className={styles.checkoutButton} to= '/Checkout'>Chackout</NavLink>
+                    </div>
                 </div>
             </div>
         </div>
