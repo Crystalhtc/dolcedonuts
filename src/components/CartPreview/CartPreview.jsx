@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default function CartPreview({ cart, cartSize, onClose }) {
     const subtotal = [...cart.entries()].reduce((total, [product, quantity]) => {
         return total + (product.price * quantity);
-      }, 0).toFixed(2)
+    }, 0).toFixed(2)
 
     return (
         <div className={styles.modalBackdrop}  onClick={onClose}>
@@ -31,7 +31,7 @@ export default function CartPreview({ cart, cartSize, onClose }) {
                         <p>${subtotal}</p>
                     </div>
                     <div className={styles.checkoutButtonContainer}>
-                        <NavLink onClick={onClose} className={styles.checkoutButton} to= '/Checkout'>Chackout</NavLink>
+                        <NavLink onClick={onClose} className={styles.checkoutButton} to= '/Checkout'>Checkout</NavLink>
                     </div>
                 </div>
             </div>

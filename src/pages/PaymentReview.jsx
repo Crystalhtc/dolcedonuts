@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from './PaymentReview.module.css'; 
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
 import MintButton from "../components/MintButton/MintButton";
@@ -5,13 +6,18 @@ import Donut1 from '../assets/Donut1.png';
 import Donut2 from '../assets/Donut2.png';
 import LinzerCookie from '../assets/LinzerCookie.png';
 
-export default function PaymentReview() {
+export default function PaymentReview({cart}) {
 
     const products = [
         { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
         { id: 2, name: 'Product 2', quantity: 1, price: 2.00, img: Donut2 },
         { id: 3, name: 'Product 3', quantity: 1, price: 2.00, img: LinzerCookie },
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
 
     return(
         <div className={styles.reviewContainer}>
@@ -51,15 +57,15 @@ export default function PaymentReview() {
                 <div className={styles.orderSummary}>
                     <h1>Your order:</h1>
                     <div className={styles.productList}>
-                    {products.map(product => (
-                        <CheckoutProductCard 
-                            key={product.id}
-                            imageSrc={product.img} 
-                            productName={product.name} 
-                            quantity={product.quantity} 
-                            price={`CA$${product.price.toFixed(2)}`} 
-                        />
-                    ))}
+                        {[...cart.entries()].map(([product, quantity]) => (
+                            <CheckoutProductCard 
+                                key={product.id}
+                                imageSrc={product.image_url}
+                                productName={product.name} 
+                                quantity={quantity} 
+                                price={`CA$${product.price.toFixed(2)}`} 
+                            />
+                        ))}
                     </div>
                     <div className={styles.priceSummary}>
                         <div className={styles.subtotal}>

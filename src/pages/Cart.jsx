@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import styles from "./Cart.module.css";
 import MintButton from "../components/MintButton/MintButton";
 
 export default function Cart({ cart, setCart }) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleAdd = (item) => {
         const newCart = new Map(cart);

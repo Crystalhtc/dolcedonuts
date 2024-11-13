@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../Data/products';
 import styles from './ProductDetails.module.css'; 
 import MintButton from '../components/MintButton/MintButton.jsx';  
 
 export default function ProductDetails({ addToCart }) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const { id } = useParams();
     const product = products.find((item) => item.id === parseInt(id));
     const [quantity, setQuantity] = useState(1);

@@ -50,8 +50,8 @@ function App() {
           <Route path="/productdetails/:id" element={<ProductDetails addToCart={addToCart}/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} cartSize={cartSize} />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/paymentreview" element={<PaymentReview />} />
+          <Route path="/checkout" element={<Checkout cart={cart}/>} />
+          <Route path="/paymentreview" element={<PaymentReview cart={cart}/>} />
         </Routes>
       </div>
       <Footer />

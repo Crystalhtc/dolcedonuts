@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Checkout.module.css';
 import AddressInput from "../components/AddressInput/AddressInput"
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
@@ -7,7 +7,11 @@ import Donut1 from '../assets/Donut1.png';
 import Donut2 from '../assets/Donut2.png';
 import LinzerCookie from '../assets/LinzerCookie.png';
 
-export default function Checkout() {
+export default function Checkout({cart}) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     // State to manage delivery options (store pickup or delivery)
     const [isDelivery, setIsDelivery] = useState(false);
 
@@ -159,12 +163,12 @@ export default function Checkout() {
             {/* Right Column for Order Summary */}
             <div className={styles.rightColumn}>
                 <div className={styles.checkoutProducts}>
-                    {products.map(product => (
+                    {[...cart.entries()].map(([product, quantity]) => (
                         <CheckoutProductCard 
                             key={product.id}
-                            imageSrc={product.img}
+                            imageSrc={product.image_url}
                             productName={product.name} 
-                            quantity={product.quantity} 
+                            quantity={quantity} 
                             price={`CA$${product.price.toFixed(2)}`} 
                         />
                     ))}
