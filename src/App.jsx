@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -25,7 +25,7 @@ function App() {
     newCart.set(product, (cart.get(product) || 0) + quantity);
     setCart(newCart);
     setIsPreviewOpen(true);
-    console.log(isCartPreviewOpen)
+    console.log(isCartPreviewOpen);
   }
 
   function computeCartSize() {
@@ -33,7 +33,7 @@ function App() {
   }
   
   const cartSize = computeCartSize();
-  console.log(cartSize)
+  console.log(cartSize);
 
   return (
     <Router>
@@ -47,11 +47,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/order" element={<Order />} />
-          <Route path="/productdetails/:id" element={<ProductDetails addToCart={addToCart}/>} />
+          <Route path="/productdetails/:id" element={<ProductDetails addToCart={addToCart} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} cartSize={cartSize} />} />
-          <Route path="/checkout" element={<Checkout cart={cart}/>} />
-          <Route path="/paymentreview" element={<PaymentReview cart={cart}/>} />
+          <Route path="/checkout" element={<Checkout cart={cart} />} />
+          <Route path="/paymentreview" element={<PaymentReview cart={cart} />} />
         </Routes>
       </div>
       <Footer />
@@ -60,4 +60,3 @@ function App() {
 }
 
 export default App;
-
