@@ -1,0 +1,81 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 6rem;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: var( --pink);
+  border-radius: 8px;
+  align-items: center;
+  padding-left: 2rem;
+  height: 60px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.heading::after {
+  content: '';
+  position: absolute;
+  top: -10px; 
+  left: 82%; /* Center the triangle horizontally */
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--pink); /* Match the dropdown background color */
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.modalContent {
+  position: relative;
+  top: 100px;
+  left: 60%;
+  background-color: white;
+  border-radius: 8px;
+  width: 300px;
+  z-index: 10;
+  position: relative;
+}
+.items {
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+.singleItem {
+  border-bottom: 1px solid var(--brown);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.singleItem img {
+  width: 70px;
+  height: 70px;
+}
+.info {
+  flex: 1;
+}
+.subtotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.checkoutButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+.checkoutButton {
+  border-radius: 20px;
+  border: 5px solid var(--mint);
+  background: var(--mint);
+  text-decoration: none;
+  color: var(--brown);
+}
