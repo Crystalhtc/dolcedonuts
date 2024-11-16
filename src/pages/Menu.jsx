@@ -1,15 +1,18 @@
+import { useState } from "react";
 import ProductCard from "../components/ProductCard/ProductCard"
 import { products } from "../Data/products"
 import './Order.css'
 
 export default function Menu() {
+    const [isDonutsExpanded, setIsDonutsExpanded] = useState(false);
 
-    function productList(category) {
+    function productList(category, limit) {
         return(
             products
                 .filter(product => product.category === category)
+                .slice(0, limit)
                 .map((product, index) => {
-                    return <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={true} />       
+                    return <ProductCard key={index} id={product.id} name={product.name} price={product.price} image_url={product.image_url} showDetails={false} />       
                 })
         )
     }
@@ -48,8 +51,12 @@ export default function Menu() {
 
             <div id="donuts" className="sectionTitle"><h1>Donuts</h1></div>
             <div className="innerContainer">
-                {productList("donut")}
+                {productList("donut", isDonutsExpanded ? products.filter(p => p.category === "donut").length : 8)}
             </div>
+            {isDonutsExpanded ? 
+                <button onClick={() => setIsDonutsExpanded(false)} className="showMoreButton">View Less</button>
+                : <button onClick={() => setIsDonutsExpanded(true)} className="showMoreButton">View More</button>
+            }
 
             <div id="bakery" className="sectionTitle"><h1>Bakery</h1></div>
             <div className="innerContainer">

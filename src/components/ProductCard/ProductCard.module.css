@@ -8,6 +8,12 @@
     flex-direction: column;
     align-items: center;
 }
+.container h1 {
+    text-align: center;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
 .image {
     width: 258px;
     height: 258px;
@@ -25,6 +31,9 @@ button {
     border: none;
     color: var(--brown);
     background: var(--Cream, #FBF4EF);
+}
+button:hover {
+    cursor: pointer;
 }
 button h2 {
     margin: 0;
@@ -44,6 +53,9 @@ button h2 {
     .priceAndButton {
         gap: 1em;
     }
+    .container h1 {
+        height: 36px;
+    }
     h1 {
         font-size: 12pt !important;
     }
@@ -52,7 +64,7 @@ button h2 {
         margin: 0 !important;
     }
     button {
-        width: 56px;
+        width: 70px;
         height: 22px;
         color: var(--brown);
         background: var(--Cream, #FBF4EF);

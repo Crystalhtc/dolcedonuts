@@ -5,6 +5,36 @@
     width: 100%; 
     margin: 0 auto;      
 }
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 2rem auto;
+}
+.heading h1 {
+    margin: 0;
+}
+.searchBar {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.searchBar input {
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid var(--cream);
+    border-radius: 5px;
+}
+input::placeholder {
+    color: #6C7072;
+}
+.searchBar img {
+    margin: 1rem;
+}
 .innerContainer {
     display: flex;
     flex-wrap: wrap;
@@ -37,21 +67,39 @@
     margin: 3rem 0;
     background-color: var(--mint);
 }
+.showMoreButton {
+    width: 300px;
+    height: 72px;
+    border-radius: 20px;
+    background: var(--cream);
+    font-family: "Noto Serif";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+
+}
 #bringToTop {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 0;
     position: fixed; 
-    right: 4rem;
-    bottom: 10rem;
+    right: 3rem;
+    bottom: 3rem;
     background-color: transparent;
 }
 
 /* tablet */
 @media screen and (max-width: 1024px) {
+    .heading {
+        flex-direction: column;
+    }
+    .searchBar {
+        position: inherit;
+        margin-top: 20px;
+    }
     .innerContainer {
         width: 100%;
         margin: 0 16px 32px;
