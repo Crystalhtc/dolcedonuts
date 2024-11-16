@@ -26,7 +26,6 @@ function App() {
     newCart.set(product, (cart.get(product) || 0) + quantity);
     setCart(newCart);
     setIsPreviewOpen(true);
-    console.log(isCartPreviewOpen);
 
     setTimeout(() => {
       setIsFadingOut(true);
@@ -42,7 +41,10 @@ function App() {
   }
   
   const cartSize = computeCartSize();
-  console.log(cartSize);
+
+  const clearCart = () => {
+    setCart(new Map());
+  };
 
   return (
     <Router>
@@ -65,7 +67,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} cartSize={cartSize} />} />
           <Route path="/checkout" element={<Checkout cart={cart} />} />
-          <Route path="/paymentreview" element={<PaymentReview cart={cart} />} />
+          <Route path="/paymentreview" element={<PaymentReview cart={cart} clearCart={clearCart} />} />
         </Routes>
       </div>
       <Footer />

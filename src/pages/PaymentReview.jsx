@@ -6,7 +6,7 @@ import Donut1 from '../assets/Donut1.png';
 import Donut2 from '../assets/Donut2.png';
 import LinzerCookie from '../assets/LinzerCookie.png';
 
-export default function PaymentReview({cart}) {
+export default function PaymentReview({cart, clearCart}) {
 
     const products = [
         { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
@@ -49,6 +49,7 @@ export default function PaymentReview({cart}) {
                                 products={products} 
                                 path="/" 
                                 buttonText="Continue Shopping" 
+                                onClick={() => clearCart()}
                             />
                         </div>
                         
