@@ -1,3 +1,11 @@
+/* fading out */
+.cartPreview {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.cartPreview.fadeOut {
+  opacity: 0;
+}
 .modalBackdrop {
   position: absolute;
   top: 0;

@@ -18,6 +18,7 @@ import CartPreview from './components/CartPreview/CartPreview';
 function App() {
   const [cart, setCart] = useState(new Map());
   const [isCartPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   function addToCart(product, quantity) {
     console.log('Adding to cart:', product, 'Quantity:', quantity);
@@ -26,6 +27,14 @@ function App() {
     setCart(newCart);
     setIsPreviewOpen(true);
     console.log(isCartPreviewOpen);
+
+    setTimeout(() => {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setIsPreviewOpen(false);
+        setIsFadingOut(false); // Reset fade-out state
+      }, 300); // Match the duration of the fade-out CSS transition
+    }, 3000);
   }
 
   function computeCartSize() {
@@ -39,7 +48,12 @@ function App() {
     <Router>
       <Header cartSize={cartSize} onCartClick={() => setIsPreviewOpen(true)} />
       {isCartPreviewOpen && (
-        <CartPreview cart={cart} cartSize={cartSize} onClose={() => setIsPreviewOpen(false)} />
+        <CartPreview
+          cart={cart}
+          cartSize={cartSize}
+          onClose={() => setIsPreviewOpen(false)}
+          isFadingOut={isFadingOut}
+        />
       )}
       <div>
         <Routes>

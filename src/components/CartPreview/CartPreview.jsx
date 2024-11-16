@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CartPreview.module.css';
 import { NavLink } from 'react-router-dom';
 
-export default function CartPreview({ cart, cartSize, onClose }) {
+export default function CartPreview({ cart, cartSize, onClose, isFadingOut }) {
     
     const handleRemove = (item) => {
         const newCart = new Map(cart);
@@ -20,7 +20,7 @@ export default function CartPreview({ cart, cartSize, onClose }) {
     }, 0).toFixed(2)
 
     return (
-        <div className={styles.modalBackdrop}  onClick={onClose}>
+        <div className={`${styles.modalBackdrop} ${styles.cartPreview} ${isFadingOut ? styles.fadeOut : ''}`}  onClick={onClose}>
             <div className={styles.modalContent} 
                 onClick={(e) => e.stopPropagation()}>
                 <div className={styles.heading}>
