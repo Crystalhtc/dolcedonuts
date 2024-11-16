@@ -1,10 +1,19 @@
 .modalBackdrop {
   position: absolute;
-  top: .5rem;
-  left: 6rem;
+  top: 0;
   width: 100%;
-  height: 100%;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+.modalContent {
+  position: absolute;
+  top: 120px;
+  left: 65%;
+  background-color: white;
+  border-radius: 8px;
+  width: 300px;
+  z-index: 10;
 }
 .heading {
   display: flex;
@@ -14,9 +23,8 @@
   align-items: center;
   padding-left: 2rem;
   height: 60px;
-  padding-bottom: 10px;
-  position: relative;
 }
+/* triangle */
 .heading::after {
   content: '';
   position: absolute;
@@ -30,26 +38,15 @@
 
 .closeButton {
   background: none;
-  border: none;
-  font-size: 3rem;
+  font-size: 24px;
   cursor: pointer;
 }
-.modalContent {
-  position: relative;
-  top: 100px;
-  left: 60%;
-  background-color: white;
-  border-radius: 8px;
-  width: 300px;
-  z-index: 10;
-  position: relative;
-}
 .items {
-  margin: 2rem 0;
-  padding: 0 2rem;
+  margin: 0 2rem;
 }
 .singleItem {
   border-bottom: 1px solid var(--brown);
+  margin: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -84,10 +81,6 @@
   padding: 5px 5px 5px 5px;
 }
 
-.cartSizeText {
-  font-weight: lighter;
-}
-
 .cartProductText {
   font-weight: bold;
 }
@@ -99,4 +92,47 @@
 .checkoutBtn {
   margin-left: 58.5rem;
   margin-bottom: 5rem;
+}
+
+/* Tablet (768x1024) */
+@media screen and (max-width: 1024px) {
+  .modalContent {
+    left: 55%;
+  }
+}
+/* Mobile (360x800) */
+@media screen and (max-width: 767px) {
+  .modalContent {
+    width: 250px;
+    top: 70px;
+    left: 30%;
+  }
+  .heading {
+    border-radius: 5px;
+    padding-left: 1rem;
+    height: 40px;
+  }
+  .closeButton {
+    font-size: 16px;
+  }
+  .items {
+    margin: 0 1rem;
+  }
+  .items p {
+    font-size: 12px;
+    height: 10px;
+  }
+  .singleItem img {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* Extra small screens */
+@media screen and (max-width: 359px) {
+  .modalBackdrop {
+    top: 50px;
+  }
+  .modalContent {
+    position: static;
+  }
 }
