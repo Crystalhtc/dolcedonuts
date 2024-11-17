@@ -65,7 +65,6 @@ export default function Cart({ cart, setCart }) {
                         buttonText="Checkout" 
                     />
                 </div>
-
             </div>
         </div>
     );

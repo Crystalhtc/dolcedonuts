@@ -1,25 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import styles from './PaymentReview.module.css'; 
-import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
+import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard";
 import MintButton from "../components/MintButton/MintButton";
-import Donut1 from '../assets/Donut1.png';
-import Donut2 from '../assets/Donut2.png';
-import LinzerCookie from '../assets/LinzerCookie.png';
 
-export default function PaymentReview({cart, clearCart}) {
+export default function PaymentReview({ cart, clearCart }) {
+    const TAX_RATE = 0.12; 
 
-    const products = [
-        { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
-        { id: 2, name: 'Product 2', quantity: 1, price: 2.00, img: Donut2 },
-        { id: 3, name: 'Product 3', quantity: 1, price: 2.00, img: LinzerCookie },
-    ];
+    const { subtotal, tax, total } = useMemo(() => {
+        let subtotal = 0;
+        for (const [product, quantity] of cart.entries()) {
+            subtotal += product.price * quantity;
+        }
+        const tax = subtotal * TAX_RATE;
+        const total = subtotal + tax;
+
+        return { subtotal, tax, total };
+    }, [cart]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-
-    return(
+    return (
         <div className={styles.reviewContainer}>
             <h1 className={styles.thankyouMsg}>Thank you for your order!</h1>
             <div className={styles.orderReview}>
@@ -46,13 +48,12 @@ export default function PaymentReview({cart, clearCart}) {
                     <div className={styles.continueButtonContainer}>
                         <div className={styles.continueButton}>
                             <MintButton 
-                                products={products} 
+                                products={[...cart.keys()]} 
                                 path="/" 
                                 buttonText="Continue Shopping" 
                                 onClick={() => clearCart()}
                             />
                         </div>
-                        
                     </div>
                 </div>
                 <div className={styles.orderSummary}>
@@ -64,27 +65,26 @@ export default function PaymentReview({cart, clearCart}) {
                                 imageSrc={product.image_url}
                                 productName={product.name} 
                                 quantity={quantity} 
-                                price={`CA$${product.price.toFixed(2)}`} 
+                                price={`CA$${(product.price * quantity).toFixed(2)}`} 
                             />
                         ))}
                     </div>
                     <div className={styles.priceSummary}>
                         <div className={styles.subtotal}>
                             <p>Subtotal:</p>
-                            <p>CA$6.00</p>
+                            <p>CA${subtotal.toFixed(2)}</p>
                         </div>
                         <div className={styles.tax}>
                             <p>Tax:</p>
-                            <p>CA$0.72</p>
+                            <p>CA${tax.toFixed(2)}</p>
                         </div>
                         <div className={styles.total}>
                             <p>Total:</p>
-                            <p>CA$6.72</p>
+                            <p>CA${total.toFixed(2)}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
-    )
+    );
 }

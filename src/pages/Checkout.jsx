@@ -3,9 +3,6 @@ import styles from './Checkout.module.css';
 import AddressInput from "../components/AddressInput/AddressInput"
 import CheckoutProductCard from "../components/CheckoutProductCard/CheckoutProductCard"
 import MintButton from "../components/MintButton/MintButton";
-import Donut1 from '../assets/Donut1.png';
-import Donut2 from '../assets/Donut2.png';
-import LinzerCookie from '../assets/LinzerCookie.png';
 
 export default function Checkout({cart}) {
     useEffect(() => {
@@ -38,23 +35,29 @@ export default function Checkout({cart}) {
             ...formData,
             [e.target.name]: e.target.value
         });
-    };const [tax, setTax] = useState(0.72); 
-
-    const products = [
-        { id: 1, name: 'Product 1', quantity: 1, price: 2.00, img: Donut1 },
-        { id: 2, name: 'Product 2', quantity: 1, price: 2.00, img: Donut2 },
-        { id: 3, name: 'Product 3', quantity: 1, price: 2.00, img: LinzerCookie },
-    ];
-
-    // Calculate subtotal
-    const calculateSubtotal = () => {
-        return products.reduce((total, product) => total + product.price * product.quantity, 0);
     };
+    
+    const [tax, setTax] = useState(0.72); 
 
-    // Function to calculate total
-    const calculateTotal = () => {
-        return calculateSubtotal() + tax;
-    };
+const calculateSubtotal = () => {
+    let subtotal = 0;
+    for (const [product, quantity] of cart.entries()) {
+        subtotal += product.price * quantity;
+    }
+    return subtotal;
+};
+
+// Function to calculate tax (12% of the subtotal)
+const calculateTax = () => {
+    return calculateSubtotal() * 0.12;
+};
+
+// Function to calculate total
+const calculateTotal = () => {
+    return calculateSubtotal() + calculateTax();
+};
+
+
 
     // // Check if all fields are filled for enabling the "Pay Now" button
     // const isFormComplete = () => {
@@ -180,23 +183,24 @@ export default function Checkout({cart}) {
                 <div className={styles.price}>
                     <div className={styles.subtotal}>
                         <p>Subtotal:</p>
-                        <p>CA${calculateSubtotal().toFixed(2)}</p> {/* Display subtotal */}
+                        <p>CA${calculateSubtotal().toFixed(2)}</p>
                     </div>
                     <div className={styles.tax}>
                         <p>Tax:</p>
-                        <p>CA${tax.toFixed(2)}</p> {/* Display tax */}
+                        <p>CA${calculateTax().toFixed(2)}</p> {/* Dynamically calculate tax */}
                     </div>
                     <div className={styles.total}>
                         <p>Total:</p>
-                        <p>CA${calculateTotal().toFixed(2)}</p> {/* Calculate and display total */}
+                        <p>CA${calculateTotal().toFixed(2)}</p>
                     </div>
                 </div>
+
 
                 {/* Pay Now Button */}
                 <div className={styles.payNowContainer}>
                     <div className={styles.payButton}>
                         <MintButton 
-                            products={products} 
+                             
                             path="/paymentReview" 
                             buttonText="Pay Now" 
                         />
