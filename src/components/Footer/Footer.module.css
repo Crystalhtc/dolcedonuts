@@ -4,6 +4,7 @@
     color: var(--brown);
     flex-shrink: 0;          
     margin: auto;
+    font-family: "Arimo", sans-serif;
 }
 
 .topContainer {
@@ -70,7 +71,7 @@
     height: auto; 
 }
 
-
+/* Tablet Styles */
 @media only screen and (max-width: 1024px) {
     .footer {
         width: 100%; 
@@ -90,7 +91,8 @@
         flex-direction: column;
         justify-self: center;
         align-items: center;
-        gap: 1.5rem; 
+        margin-top: -1rem;
+        font-size: smaller;
     }
 
     .newsletterSignup {
@@ -115,7 +117,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .linkList li {
@@ -124,44 +126,42 @@
     }
 
     .socialMedia img {
-        width: 150px; 
+        width: 200px !important;
+        margin-top: 1rem;
     }
 }
 
+/* Phone styles */
 @media only screen and (max-width: 800px) {
     .footer {
         width: 100vw; 
     }
 
+    .signUpMessage {
+        padding-top: 1rem;
+    }
+
     .topContainer {
         flex-direction: column;
         gap: 1rem; 
+        padding: 1rem;
     }
 
     .footerBottomContainer {
-        flex-direction: column;
-        gap: 1rem; 
+        font-size: small;
     }
 
     .newsletterSignup input {
-        width: 40vw; 
+        width: 30%; 
+        padding: 10px; 
     }
 
     .signupButton {
-        width: 20vw; 
+        width: 30%;
     }
 
     .footerLinks {
         flex-direction: column;
         font-size: small; 
-    }
-
-    .linkList li {
-        display: block;
-        margin: 5px 0; 
-    }
-
-    .socialMedia img {
-        width: 100px; 
     }
 }
