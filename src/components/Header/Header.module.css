@@ -6,6 +6,7 @@
     justify-content: center;  
     flex-shrink: 0;          
     margin: auto;
+    font-family: "Arimo";
 }
 
 .navList {
