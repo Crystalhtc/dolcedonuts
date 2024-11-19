@@ -91,10 +91,10 @@ export default function Home() {
                         />
                         <div className={styles.cardContent}>
                             <p>{card.text}</p>
-                            {/* <a href={card.link} className={styles.ctaButton}>{card.button}</a> */}
                             <NavLink
                                 to={card.link}
-                                className={styles.ctaButton}
+                                // className={styles.ctaButton}
+                                className={`${styles.ctaButton} ${card.id === 1 ? styles.aboutUsButton : ''}`}
                             >
                                 {card.button}
                             </NavLink>

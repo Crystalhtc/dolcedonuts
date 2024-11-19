@@ -78,3 +78,121 @@
     background-color: var(--brown);
     color: var(--cream);
 }
+
+.aboutUsButton {
+    position: relative;
+    top: -3.5rem;
+    margin-left: 9%;
+}
+
+
+/* Responsive styles for tablet */
+@media (max-width: 1024px) {
+    .homeContainer {
+        padding: 15px;
+    }
+
+    .homeBanner {
+        max-width: 100%;
+    }
+
+    .addressCard {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cardsContainer {
+        gap: 20px;
+    }
+
+    .card {
+        flex-direction: column; 
+        width: 90%; 
+        padding: 1rem;
+    }
+
+    .cardLeft,
+    .cardRight {
+        flex-direction: column; 
+    }
+
+    .cardImage {
+        width: 100%;
+        height: auto; 
+    }
+
+    .cardContent {
+        padding: 15px; 
+        text-align: center; 
+    }
+
+    .cardContent p {
+        font-size: 1rem; 
+        margin-bottom: 2rem;
+    }
+
+    .ctaButton {
+        width: 80%; 
+        height: auto;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .aboutUsButton {
+        margin-left: 0;
+        top: -2rem; 
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .homeContainer {
+        padding: 10px;
+    }
+
+    .homeBanner {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .addressCard {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cardsContainer {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%; 
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    .cardImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardContent {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cardContent p {
+        font-size: 0.9rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    .ctaButton {
+        width: 100%; 
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .aboutUsButton {
+        top: -1.5rem; 
+    }
+}
