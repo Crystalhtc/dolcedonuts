@@ -70,8 +70,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     text-decoration: none;
+    font-family: "Noto Serif", serif;
 }
 
 .ctaButton:hover {

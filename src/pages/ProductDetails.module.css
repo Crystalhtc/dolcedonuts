@@ -9,6 +9,7 @@
     margin: 30px auto;
     width: 90%;
     max-width: 1200px;
+    font-family: "Arimo", sans-serif;
 }
 
 .productDetailsImageContainer {
@@ -64,6 +65,7 @@
 
 .customMintButton {
     width: 30%;
+    font-family: "Noto Serif", sans-serif;
 }
 
 
