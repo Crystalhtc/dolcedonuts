@@ -48,7 +48,8 @@ export default function ProductDetails({ addToCart }) {
 
                 <MintButton 
                     onClick={() => addToCart(product, quantity)}
-                    buttonText="Add to Cart" path="#"/>
+                    buttonText="Add to Cart" path="#"
+                    className={styles.customMintButton} />
             </div>
         </div>
     );
