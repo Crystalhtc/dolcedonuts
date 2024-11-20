@@ -1,36 +1,106 @@
-import { NavLink } from 'react-router-dom'; 
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg'; 
-import cartIcon from '../../assets/cart-icon.svg'; 
+import cartIcon from '../../assets/cart-icon.svg';
+import hamburgerIcon from '../../assets/hamburger-icon.svg';
 
 export default function Header({ cartSize }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className={styles.nav}>
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? styles.activeLink : undefined)}>About</NavLink>
-        </li>
-        <li className={styles.navItem}>
-          <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeLink : undefined)}>Menu</NavLink>
-        </li>
-        <li className={styles.logoContainer}>
-          <NavLink to="/">
-            <img src={logo} alt="Logo" className={styles.logo} />
+    <nav className={`${styles.nav} ${isMenuOpen ? styles.expanded : ''}`}>
+      <div className={styles.navContainer}>
+        <div className={styles.hamburgerContainer} onClick={toggleMenu}>
+          <img 
+            src={hamburgerIcon} 
+            alt={isMenuOpen ? "Close Menu" : "Open Menu"} 
+            className={styles.hamburgerIcon} 
+          />
+        </div>
+        
+        <div className={styles.desktopNavLeft}>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+          >
+            About
           </NavLink>
-        </li>
-        <li className={styles.navItem}>
-          <NavLink to="/order" className={({ isActive }) => (isActive ? styles.activeLink : undefined)}>Order</NavLink>
-        </li>
-        <li className={styles.navItem}>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? styles.activeLink : undefined)}>Contact</NavLink>
-        </li>
-        <li className={styles.navItem}>
-          <NavLink to="/cart" className={({ isActive }) => (isActive ? styles.activeLink : undefined)}>
-            <img src={cartIcon} alt="Cart" className={styles.cartIcon} />
-            {cartSize > 0 && <span className={styles.cartBadge}>{cartSize}</span>}
+          <NavLink 
+            to="/menu" 
+            className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+          >
+            Menu
           </NavLink>
-        </li>
-      </ul>
+        </div>
+        
+        <NavLink to="/" className={styles.logoContainer}>
+          <img src={logo} alt="Logo" className={styles.logo} />
+        </NavLink>
+        
+        <div className={styles.desktopNavRight}>
+          <NavLink 
+            to="/order" 
+            className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+          >
+            Order
+          </NavLink>
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+          >
+            Contact
+          </NavLink>
+        </div>
+        
+        <NavLink to="/cart" className={styles.cartContainer}>
+          <img src={cartIcon} alt="Cart" className={styles.cartIcon} />
+          {cartSize > 0 && <span className={styles.cartBadge}>{cartSize}</span>}
+        </NavLink>
+        
+        <ul className={`${styles.mobileNavList} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+              onClick={toggleMenu}
+            >
+              About
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/menu" 
+              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+              onClick={toggleMenu}
+            >
+              Menu
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/order" 
+              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+              onClick={toggleMenu}
+            >
+              Order
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+              onClick={toggleMenu}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

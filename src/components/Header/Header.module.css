@@ -1,48 +1,57 @@
 .nav {
-    /* width: 1440px;           */
-    height: 160px;          
+    height: 160px;
     background-color: var(--mint);
-    display: flex;         
-    justify-content: center;  
-    flex-shrink: 0;          
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
     margin: auto;
     font-family: "Arimo";
 }
 
-.navList {
-    list-style-type: none;
-    display: flex;          
-    justify-content: center; 
-    align-items: center;    
-    margin: 0;
-    padding: 0;
-    width: 100%; 
-    
-    margin-left: 11%;       
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 2rem;
+    position: relative;
 }
 
-.navItem {
-    margin: 0 4rem;         
+.desktopNavLeft,
+.desktopNavRight {
+    display: flex;
+    gap: 4rem;
 }
 
-.navItem a {
-    text-decoration: none;   
-    color: var(--brown);     
+.desktopNavLeft a,
+.desktopNavRight a {
+    text-decoration: none;
+    color: var(--brown);
+    margin: 0 1rem;
 }
 
 .logoContainer {
-    flex: 0 0 auto;        
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
-    width: 122px;          
-    height: 122px;          
-    object-fit: contain;    
+    width: 122px;
+    height: 122px;
+    object-fit: contain;
+}
+
+.cartContainer {
+    position: absolute;
+    right: 2rem;
 }
 
 .cartIcon {
-    width: 36px; 
-    height: auto; 
+    width: 36px;
+    height: auto;
 }
 
 .cartBadge {
@@ -51,26 +60,48 @@
     border-radius: 50%;
     border: 0.5px solid var(--brown);
     font-size: 12px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
 }
 
-.navItem .activeLink {
-    text-decoration: underline; 
-    color: var(--brown); 
+.activeLink {
+    text-decoration: underline;
+    color: var(--brown);
 }
 
-/* Tablet (768x1024) */
+.hamburgerContainer {
+    display: none;
+}
+
+.mobileNavList {
+    display: none;
+}
+
 @media screen and (max-width: 1024px) {
+
+    .navContainer {
+        padding: 1rem 0;
+    }
+
+
+    .desktopNavLeft,
+    .desktopNavRight,
+    .desktopNavLeft a,
+    .desktopNavRight a {
+        display: none;
+    }
+
     .nav {
-        width: 100%;
         height: 120px;
     }
 
-    .navList {
-        margin-left: 5%;
-    }
-
-    .navItem {
-        margin: 0 2rem;
+    .logoContainer {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .logo {
@@ -78,101 +109,77 @@
         height: 90px;
     }
 
-    .cartIcon {
+    .hamburgerContainer {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .hamburgerIcon {
         width: 30px;
+        height: auto;
+        color: var(--brown);
+    }
+
+    .cartContainer {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mobileNavList {
+        display: none;
+    }
+
+    .mobileNavList.mobileMenuOpen {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--mint);
+        z-index: 10;
+        padding: 0;
+        animation: slideDown 0.3s ease;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .mobileNavList .navItem {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgb(201, 201, 201);
+    }
+
+    .navItem a {
+        text-decoration: none;
+        color: var(--brown);
     }
 }
 
-/* Mobile (360x800) */
 @media screen and (max-width: 767px) {
     .nav {
         height: auto;
-        padding: 1rem 0;
-        position: relative;
-    }
-
-    .navList {
-        flex-direction: column;
-        margin-left: 0;
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-
-    .navItem {
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-
-    .logoContainer {
-        position: absolute;
-        top: 0.5rem;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .logo {
         width: 70px;
         height: 70px;
     }
-
-    .cartIcon {
-        width: 24px;
-    }
-
-    /* Assuming there's a cart item in the nav */
-    .navItem:last-child {
-        position: absolute;
-        top: 0.75rem;
-        right: 1rem;
-    }
 }
 
-/* Extra small screens */
-@media screen and (max-width: 359px) {
-    .nav {
-        padding: 0.75rem 0;
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
-    .navList {
-        gap: 0.75rem;
-    }
-
-    .navItem {
-        margin: 0.25rem 0;
-        font-size: 0.9rem;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .cartIcon {
-        width: 20px;
-    }
-}
-
-/* Adjust heights for nav when menu is expanded on mobile */
-@media screen and (max-width: 767px) {
-    .nav.expanded {
-        height: auto;
-        min-height: 300px;
-    }
-
-    .nav {
-        transition: height 0.3s ease;
-    }
-}
-
-/* Prevent layout shifts during transitions */
-@media screen and (min-width: 768px) {
-    .nav {
-        height: 120px !important;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .nav {
-        height: 160px !important;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
