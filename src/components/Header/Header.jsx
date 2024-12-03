@@ -74,20 +74,19 @@ export default function Header({ cartSize }) {
           </li>
           <li className={styles.navItem}>
             <NavLink 
-              to="/menu" 
-              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
-              onClick={toggleMenu}
-            >
-              Menu
-            </NavLink>
-          </li>
-          <li className={styles.navItem}>
-            <NavLink 
               to="/order" 
               className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
               onClick={toggleMenu}
             >
               Order
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/reviews" 
+              className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+            >
+              Reviews
             </NavLink>
           </li>
           <li className={styles.navItem}>
