@@ -31,10 +31,10 @@ export default function Header({ cartSize }) {
             About
           </NavLink>
           <NavLink 
-            to="/menu" 
+            to="/order" 
             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
           >
-            Menu
+            Order
           </NavLink>
         </div>
         
@@ -44,10 +44,10 @@ export default function Header({ cartSize }) {
         
         <div className={styles.desktopNavRight}>
           <NavLink 
-            to="/order" 
+            to="/reviews" 
             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
           >
-            Order
+            Reviews
           </NavLink>
           <NavLink 
             to="/contact" 

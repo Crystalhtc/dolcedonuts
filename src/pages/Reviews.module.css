@@ -1,0 +1,54 @@
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2rem auto;
+}
+.heading h1, .heading p{
+    text-align: center;
+    margin: 0.3rem;
+}
+.formContainer {
+    padding: 2rem;
+    color: var(--brown);
+}
+.nameAndRating {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+}
+.row textarea {
+    background-color: var(--cream);
+    border: none;
+    border-radius: 5px;
+}
+.error {
+    border: 2px solid var(--pink);
+}
+.btn {
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.reviewsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto 3rem;
+}
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ratingAndDate {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}

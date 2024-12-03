@@ -14,6 +14,7 @@ import Cart from './pages/Cart';
 import ProductDetails from './pages/ProductDetails';
 import PaymentReview from './pages/PaymentReview';
 import CartPreview from './components/CartPreview/CartPreview';
+import Reviews from './pages/Reviews';
 
 function App() {
   const [cart, setCart] = useState(new Map());
@@ -68,6 +69,7 @@ function App() {
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} cartSize={cartSize} />} />
           <Route path="/checkout" element={<Checkout cart={cart} />} />
           <Route path="/paymentreview" element={<PaymentReview cart={cart} clearCart={clearCart} />} />
+          <Route path="/reviews" element={<Reviews />} />
         </Routes>
       </div>
       <Footer />
