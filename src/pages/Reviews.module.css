@@ -52,3 +52,17 @@
     gap: 3rem;
     align-items: center;
 }
+@media (max-width: 768px) {
+    .outerContainer {
+        width: 80%;
+    }
+    .formContainer {
+        padding: 1rem;
+        width: 80%;
+        margin: 1rem auto;
+    }
+    .nameAndRating {
+        flex-direction: column;
+        gap: 0rem;
+    }
+}
