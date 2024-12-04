@@ -41,10 +41,7 @@
 /* Responsiveness for tablet */
 @media (max-width: 1024px) {
     .contactUsCardContainer {
-        display: flex;
         gap: 7%;
-        justify-content: center;
-        margin-top: 3rem;
     }
 
     .contactUsCard {
@@ -67,10 +64,9 @@
 /* Responsiveness for mobile */
 @media (max-width: 768px) {
     .contactUsCardContainer {
-        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 5%;
-        justify-content: center;
-        margin-top: 3rem;
     }
 
     .contactUsCard {

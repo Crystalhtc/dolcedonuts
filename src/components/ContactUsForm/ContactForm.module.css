@@ -2,6 +2,9 @@
     justify-content: left;
     text-align: left;
 }
+.formContainer {
+    margin: 0 10rem 3rem;
+}
 .formPlaceholdersName {
     display: flex;
 }
@@ -101,17 +104,21 @@ form {
 
 /* Responsiveness for mobile */
 @media (max-width: 768px) {
+    .formContainer {
+        width: 80%;
+        margin: 0 3rem 3rem;
+    }
     .inputWidth{
-        width: 130px;
+        width: 120px;
     }
 
     .emailPlaceholder {
-        width: 306px;
+        width: 280px;
     }
     
     .messagePlaceholder {
-        max-width: 326px;
-        min-width: 326px;
+        max-width: 300px;
+        min-width: 300px;
         height: 200px;
         min-height: 150px;
         max-height: 250px;

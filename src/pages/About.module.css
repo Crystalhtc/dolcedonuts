@@ -1,15 +1,13 @@
 .aboutUsContainer {
     background-color: #FBF4EF;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin: 0 10rem 6rem;
     border-radius: 20px;
-    margin-bottom: 6rem;
 }
 
 .aboutUsH1 {
     text-align: center;
     color: var(--brown);
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .aboutUsH2 {
@@ -29,6 +27,7 @@ hr {
 .aboutUsImg {
     border-radius: 20px;
     margin-top: 5%;
+    width: 80%;
 }
 
 .aboutUsParr { 
@@ -42,15 +41,12 @@ hr {
 
 /* Responsiveness for tablet */
 @media (max-width: 1024px) {
-    .aboutUsH1{
-        margin-top: 3rem;
+    .aboutUsContainer {
+        margin: 0 4rem 4rem;
     }
 
-    .aboutUsImg {
-        border-radius: 20px;
-        margin-top: 5%;
-        width: 580px;
-        height: 300px;
+    .aboutUsH1{
+        margin-top: 3rem;
     }
 
     .aboutUsParr { 
@@ -60,15 +56,12 @@ hr {
 
 /* Responsiveness for mobile */
 @media (max-width: 768px) {
-    .aboutUsH1{
-        margin-top: 3rem;
+    .aboutUsContainer {
+        margin: 0 1rem 1rem;
     }
 
-    .aboutUsImg {
-        border-radius: 20px;
-        margin-top: 5%;
-        width: 350px;
-        height: 190px;
+    .aboutUsH1{
+        margin-top: 3rem;
     }
 
     .aboutUsParr { 
