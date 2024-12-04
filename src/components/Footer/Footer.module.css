@@ -105,6 +105,12 @@
         width: 30vw; 
     }
 
+    /* added padding so that it doesnt look squished */
+    .signUpMessage {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
     .signupButton {
         width: 15vw; 
     }

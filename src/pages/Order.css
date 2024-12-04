@@ -76,7 +76,6 @@ input::placeholder {
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-
 }
 #bringToTop {
     display: flex;
@@ -104,10 +103,17 @@ input::placeholder {
         width: 100%;
         margin: 0 16px 32px;
     }
-    .categories {
-        flex-direction: column;
-        gap: 1rem;
+    .categories { 
+        display: flex;  /*changed the flex-direction: column, to display: flex; */
+        gap: 4rem; /* added more rem*/
+        width: 50%; /* modified/fixed */
+        height: 110px; /* modified/fixed  */
     }
+
+    .category {
+        gap: 5px; /* this puts the icons with the text a bit closer */
+    }
+
     .category img {
         width: 36px;
         height: 36px;
@@ -119,11 +125,32 @@ input::placeholder {
         right: 1rem;
         bottom: 2rem;
     }
+
+    /* added to make the view less and more button look smaller */
+    .showMoreButton {
+        width: 160px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
 /* mobile */
 @media screen and (max-width: 768px) {
     .sectionTitle {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    .categories { 
+        width: 60%; /* modified/fixed */
+        height: 110px; /* modified/fixed */
+    }
+
+    /* added to make the view less and more button look smaller */
+    .showMoreButton {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        font-weight: 700;
     }
 }
