@@ -7,7 +7,7 @@
     background-color: var(--cream);
     border-radius: 10px;
     margin: 30px auto;
-    width: 90%;
+    width: 70%;
     max-width: 1200px;
     font-family: "Arimo", sans-serif;
 }
@@ -52,7 +52,9 @@
 }
 
 .quantitySelector button {
-    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -61,6 +63,7 @@
 
 .quantitySelector span {
     font-size: 1.4rem;
+    color: var(--brown);
 }
 
 .customMintButton {
