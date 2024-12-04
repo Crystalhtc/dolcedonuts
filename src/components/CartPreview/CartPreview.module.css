@@ -17,7 +17,7 @@
 .modalContent {
   position: absolute;
   top: 120px;
-  left: 65%;
+  right: 2.5rem;
   background-color: white;
   border-radius: 8px;
   width: 300px;
@@ -105,7 +105,7 @@
 /* Tablet (768x1024) */
 @media screen and (max-width: 1024px) {
   .modalContent {
-    left: 55%;
+    right: 2.5rem;
   }
 }
 /* Mobile (360x800) */
@@ -113,7 +113,7 @@
   .modalContent {
     width: 250px;
     top: 70px;
-    left: 30%;
+    right: 1rem;
   }
   .heading {
     border-radius: 5px;
