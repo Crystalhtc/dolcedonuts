@@ -39,26 +39,26 @@ const cardData = [
         button: 'About Us', 
         link: '/about' 
     },
-    { 
-        id: 2, 
-        image: cardImage2, 
-        text: 'Choose your favourite toppings, glazes, and flavours to create a personalized donut, just the way you like.', 
-        button: 'Custom Donut', 
-        link: '/order'  
-    },
+    // { 
+    //     id: 2, 
+    //     image: cardImage2, 
+    //     text: 'Choose your favourite toppings, glazes, and flavours to create a personalized donut, just the way you like.', 
+    //     button: 'Custom Donut', 
+    //     link: '/order'  
+    // },
     { 
         id: 3, 
         image: cardImage3, 
-        text: 'Explore sweet delights at Dolce Donuts with our signature treats, freshly baked treats, and expertly crafted coffees. Our menu is designed to satisfy your sweet cravings.', 
-        button: 'Menu', 
-        link: '/menu'  
+        text: 'Pre-order our artisanal donuts for pick-up or shipping! We prepare the same selection as in store. Treat yourself to flavour-packed joy.', 
+        button: 'Order Now', 
+        link: '/order'  
     },
     { 
         id: 4, 
         image: cardImage4, 
-        text: 'Pre-order our artisanal donuts for pick-up or shipping! We prepare the same selection as in store. Treat yourself to flavour-packed joy.', 
-        button: 'Pre-Order Online', 
-        link: '/order'  
+        text: 'See what our customers are saying about Dolce Donuts! Discover why our signature treats, freshly baked goods, and expertly crafted coffees are loved by many.', 
+        button: 'Reviews', 
+        link: '/reviews'  
     },
     { 
         id: 5, 
