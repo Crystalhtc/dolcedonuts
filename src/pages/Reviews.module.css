@@ -72,6 +72,14 @@
     border: 1px solid var(--mint);
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); */
 }
+
+.reviewTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
 .ratingAndDate {
     display: flex;
     gap: 3rem;
@@ -85,6 +93,10 @@
 
 .date {
     font-size: small;
+}
+
+.star {
+    color: var(--pink);
 }
 
 @media (max-width: 768px) {

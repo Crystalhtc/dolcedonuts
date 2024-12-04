@@ -95,12 +95,13 @@ export default function Reviews() {
             </form>
 
             <div className={styles.reviewsContainer}>
+                <h3 className={styles.reviewTitle}>What Our Customers say...</h3>
                 {
                     updatedReviews.slice().reverse().map((review, index) => (
                         <div key={index} className={styles.reviewContainer}>
                             <p className={styles.name}>{review.name}</p>
                             <div className={styles.ratingAndDate}>
-                                <p>{stars[review.rating - 1]}</p>
+                                <p className={styles.star}>{stars[review.rating - 1]}</p>
                                 <p className={styles.date}>{review.date}</p>
                             </div>
                             <p>{review.comment}</p>
