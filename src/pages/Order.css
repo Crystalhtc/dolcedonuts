@@ -104,10 +104,8 @@ input::placeholder {
         margin: 0 16px 32px;
     }
     .categories { 
-        display: flex;  /*changed the flex-direction: column, to display: flex; */
-        gap: 4rem; /* added more rem*/
-        width: 50%; /* modified/fixed */
-        height: 110px; /* modified/fixed  */
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .category {
@@ -139,11 +137,6 @@ input::placeholder {
     .sectionTitle {
         width: 100%;
         margin: 1rem 0;
-    }
-
-    .categories { 
-        width: 60%; /* modified/fixed */
-        height: 110px; /* modified/fixed */
     }
 
     /* added to make the view less and more button look smaller */
