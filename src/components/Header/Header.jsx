@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg'; 
@@ -7,13 +7,35 @@ import hamburgerIcon from '../../assets/hamburger-icon.svg';
 
 export default function Header({ cartSize }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navContainerRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        navContainerRef.current && 
+        !navContainerRef.current.contains(event.target) && 
+        isMenuOpen
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav className={`${styles.nav} ${isMenuOpen ? styles.expanded : ''}`}>
+    <nav 
+      ref={navContainerRef}
+      className={`${styles.nav} ${isMenuOpen ? styles.expanded : ''}`}
+    >
       <div className={styles.navContainer}>
         <div className={styles.hamburgerContainer} onClick={toggleMenu}>
           <img 
@@ -85,6 +107,7 @@ export default function Header({ cartSize }) {
             <NavLink 
               to="/reviews" 
               className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
+              onClick={toggleMenu}
             >
               Reviews
             </NavLink>
