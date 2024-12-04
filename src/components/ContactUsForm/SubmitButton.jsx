@@ -5,7 +5,7 @@ export default function SubmitButton({ buttonText, onClick }) {
     return (
         <div className={styles.buttonContainer}>
             <button type="submit" onClick={onClick} className={styles.submitBtn}>
-                <h2 className={styles.btnH2}>{buttonText}</h2>
+                {buttonText}
             </button>
         </div>
     );
