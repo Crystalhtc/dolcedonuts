@@ -1,44 +1,44 @@
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 10rem;
+}
 .cartH2 {
     font-family: "Noto Serif", serif;
-    margin-left: 10rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-}
-
-.listContainer {
-    margin-bottom: 5rem;
 }
 
 .itemList {
     display: flex;
     background-color: var(--cream);
     border: var(--brown) solid 1px;
-    margin-left: 5rem;
-    margin-right: 5rem;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
 }
 
 .donutImg {
-    padding-left: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin: 1rem 3rem;
+    width: 20%;
 }
 
 .cookieName {
     font-family: 'Arimo', sans-serif;;
 }
 
+.quantityAndPrice {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+
 .priceRemove {
     text-align: center;
     margin-top: 2rem;
-    margin-right: 5%;
 }
 
 .totalContainer {
     text-align: right;
-    margin-right: 5rem;
 }
 
 .totalH2 {
@@ -46,11 +46,16 @@
 }
 
 .checkoutBtn {
-    margin-left: 58.5rem;
-    margin-bottom: 5rem;
+    width: 240px;
+    display: flex;
+    float: right;
+    margin-right: 2rem;
 }
 
 .quantityControls {
+    display: flex;
+    align-items: center;
+    height: 3rem;
     border: 1px solid;
     border-color: var(--brown);
     border-radius: 20px;
@@ -73,4 +78,42 @@
 
 .quantityNum {
     font-size: 18px;
+}
+
+/* Responsiveness for tablet */
+@media (max-width: 1024px) {
+    .cartH2 { 
+        padding: 1rem 0;
+    }
+    .donutImg {
+        margin: 1rem;
+    }
+    .totalH2 {
+        padding: 1rem 0;
+    }
+    .quantityBtn {
+        font-size: 12px;
+    }
+    .quantityNum {
+        font-size: 12px;
+    }    
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+    .outerContainer {
+        margin: 1rem 3rem;
+    }
+    .quantityAndPrice {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        margin: 2rem;
+    }
+    .quantityControls {
+        height: 2rem;
+    }
+    .priceRemove {
+        margin-top: 0;
+    }
 }

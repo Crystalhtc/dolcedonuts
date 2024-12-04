@@ -31,7 +31,7 @@ export default function Cart({ cart, setCart }) {
     };
 
     return (
-        <div>
+        <div className={styles.outerContainer}>
             <h2 className={styles.cartH2}>Shopping Cart</h2>
             <div className={styles.listContainer}>
             {[...cart.entries()].map(([product, quantity]) => (
@@ -40,18 +40,18 @@ export default function Cart({ cart, setCart }) {
                         src={product.image_url}
                         alt={product.name}
                         className={styles.donutImg}
-                        width={180}
-                        height={180}
                     />
                     <h3 className={styles.cookieName}>{product.name}</h3>
-                    <div className={styles.quantityControls}>
-                        <button onClick={() => handleRemove(product)} className={styles.quantityBtn}>-</button>
-                        <span className={styles.quantityNum}>{quantity}</span>
-                        <button onClick={() => handleAdd(product)} className={styles.quantityBtn}>+</button>
-                    </div>
-                    <div className={styles.priceRemove}>
-                        <p className={styles.totalPrice}>CA ${(product.price * quantity).toFixed(2)}</p>
-                        <button className={styles.removeBtn} onClick={() => handleRemove(product)}>Remove</button>
+                    <div className={styles.quantityAndPrice}>
+                        <div className={styles.quantityControls}>
+                            <button onClick={() => handleRemove(product)} className={styles.quantityBtn}>-</button>
+                            <span className={styles.quantityNum}>{quantity}</span>
+                            <button onClick={() => handleAdd(product)} className={styles.quantityBtn}>+</button>
+                        </div>
+                        <div className={styles.priceRemove}>
+                            <p className={styles.totalPrice}>CA ${(product.price * quantity).toFixed(2)}</p>
+                            <button className={styles.removeBtn} onClick={() => handleRemove(product)}>Remove</button>
+                        </div>
                     </div>
                 </div>
                 ))}
@@ -59,7 +59,7 @@ export default function Cart({ cart, setCart }) {
 
             <div className={styles.totalContainer}>
                 <h2 className={styles.totalH2}>Subtotal: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CA ${calculateTotal()}</h2>
-                <div className={styles.checkoutBtn} style={{ width: '240px' }}>
+                <div className={styles.checkoutBtn}>
                     <MintButton 
                         path="/checkout" 
                         buttonText="Checkout" 
