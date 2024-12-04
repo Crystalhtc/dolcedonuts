@@ -20,7 +20,7 @@
 }
 
 .formPlaceholders {
- padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .inputWidth{
@@ -41,7 +41,7 @@
     min-height: 200px;
     max-height: 250px;
     border-radius: 10px;
-    border-color: none;
+    border-color: transparent;
     background-color: var(--cream);
 }
 
@@ -70,9 +70,53 @@ form {
 
 .afterSubmitH3 {
     font-family: 'Arimo', sans-serif;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .afterSubmitText {
     padding-bottom: 10px;
+}
+
+/* Responsiveness for tablet */
+@media (max-width: 1024px) {
+    .inputWidth{
+        width: 170px;
+    }
+
+    .emailPlaceholder {
+        width: 386px;
+    }
+    
+    .messagePlaceholder {
+        max-width: 410px;
+        min-width: 410px;
+        height: 200px;
+        min-height: 150px;
+        max-height: 250px;
+        border-radius: 10px;
+        border-color: transparent;
+        background-color: var(--cream);
+    }
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+    .inputWidth{
+        width: 130px;
+    }
+
+    .emailPlaceholder {
+        width: 306px;
+    }
+    
+    .messagePlaceholder {
+        max-width: 326px;
+        min-width: 326px;
+        height: 200px;
+        min-height: 150px;
+        max-height: 250px;
+        border-radius: 10px;
+        border-color: transparent;
+        background-color: var(--cream);
+    }
 }

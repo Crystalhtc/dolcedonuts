@@ -6,7 +6,6 @@
     margin-bottom: 6rem;
 }
 
-
 .aboutUsH1 {
     text-align: center;
     color: var(--brown);
@@ -19,10 +18,11 @@
 }
 
 hr {
-    height: 1px;
+    height: .2px;
     width: 20%;
-    color: var(--brown);
+    border: solid var(--brown);
     background-color: var(--brown);
+    border-radius: 5px;
     margin-bottom: 2.5rem;
 }
 
@@ -37,4 +37,41 @@ hr {
     margin-right: 10%;
     color: var(--brown);
     font-family: 'Arimo', sans-serif;
+}
+
+
+/* Responsiveness for tablet */
+@media (max-width: 1024px) {
+    .aboutUsH1{
+        margin-top: 3rem;
+    }
+
+    .aboutUsImg {
+        border-radius: 20px;
+        margin-top: 5%;
+        width: 580px;
+        height: 300px;
+    }
+
+    .aboutUsParr { 
+        font-size: 16px;
+    }
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+    .aboutUsH1{
+        margin-top: 3rem;
+    }
+
+    .aboutUsImg {
+        border-radius: 20px;
+        margin-top: 5%;
+        width: 350px;
+        height: 190px;
+    }
+
+    .aboutUsParr { 
+        font-size: 12px;
+    }
 }

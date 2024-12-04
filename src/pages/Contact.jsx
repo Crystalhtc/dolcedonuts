@@ -17,7 +17,7 @@ export default function Contact() {
                             />
                             <div>
                                 <h2 className={styles.contactUsText}>Downtown</h2>
-                                    <p className={styles.contactUsText}> 699 West Pender St.
+                                    <p className={styles.contactUsTextParr}> 699 West Pender St.
                                     <br/>
                                     Vancouver, BC V6B 1V3
                                     <br/>
@@ -30,7 +30,6 @@ export default function Contact() {
                                     *Or until sell out occurs.
                                     </p>
                             </div>
-                        
                         </div>
                     </div>
                     
@@ -44,7 +43,7 @@ export default function Contact() {
                             />
                             <div>
                                 <h2 className={styles.contactUsText}>Mount Pleasant</h2>
-                                    <p className={styles.contactUsText}> XXX Main St.
+                                    <p className={styles.contactUsTextParr}> XXX Main St.
                                     <br/>
                                     Vancouver, BC V4C 2V6
                                     <br/>
