@@ -8,18 +8,26 @@
     text-align: center;
     margin: 0.3rem;
 }
+
+.heading {
+    margin-bottom: 2rem;
+}
+
 .formContainer {
     padding: 2rem;
     color: var(--brown);
+    margin-bottom: 3rem;
 }
 .nameAndRating {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
 .row {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .row textarea {
     background-color: var(--cream);
@@ -29,11 +37,27 @@
 .error {
     border: 2px solid var(--pink);
 }
-.btn {
+.btnContainer {
     margin: 1rem 0 0 0;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
+
+.btn {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--brown);
+    color: var(--cream);
+}
+
 .reviewsContainer {
     display: flex;
     flex-direction: column;
@@ -45,13 +69,24 @@
     flex-direction: column;
     border-radius: 8px;
     padding: 1rem 2rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--mint);
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); */
 }
 .ratingAndDate {
     display: flex;
     gap: 3rem;
     align-items: center;
 }
+
+.name {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.date {
+    font-size: small;
+}
+
 @media (max-width: 768px) {
     .outerContainer {
         width: 80%;
@@ -59,10 +94,18 @@
     .formContainer {
         padding: 1rem;
         width: 80%;
-        margin: 1rem auto;
+        margin: 0 auto 3rem;
     }
     .nameAndRating {
         flex-direction: column;
         gap: 0rem;
+    }
+
+    .btnContainer {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 50%;
     }
 }

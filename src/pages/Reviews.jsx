@@ -89,8 +89,8 @@ export default function Reviews() {
                     <label htmlFor="body">Comment:</label>
                     <textarea rows="5" name="body" className={errors.body ? styles.error : ''}/>
                 </div>
-                <div className={styles.btn}>
-                    <button>Submit</button>
+                <div className={styles.btnContainer}>
+                    <button className={styles.btn}>Submit</button>
                 </div>
             </form>
 
@@ -98,12 +98,13 @@ export default function Reviews() {
                 {
                     updatedReviews.slice().reverse().map((review, index) => (
                         <div key={index} className={styles.reviewContainer}>
+                            <p className={styles.name}>{review.name}</p>
                             <div className={styles.ratingAndDate}>
                                 <p>{stars[review.rating - 1]}</p>
-                                <p>{review.date}</p>
+                                <p className={styles.date}>{review.date}</p>
                             </div>
                             <p>{review.comment}</p>
-                            <p>{review.name}</p>
+                            
                         </div>
                     ))
                 }
