@@ -7,7 +7,7 @@ const AddressInputs = ({ handleInputChange }) => {
             <div className={styles.fullWidthInput}>
                 <input type="text" name="country" placeholder="Country" onChange={handleInputChange} autoComplete="off" />
             </div>
-            <div>
+            <div className={styles.halfWidthInput}>
                 <div className={styles.firstHalfInput}>
                     <input type="text" name="firstName" placeholder="First name" onChange={handleInputChange} autoComplete="off" />
                 </div>

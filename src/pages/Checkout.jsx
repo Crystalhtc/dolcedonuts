@@ -200,7 +200,6 @@ const calculateTotal = () => {
                 <div className={styles.payNowContainer}>
                     <div className={styles.payButton}>
                         <MintButton 
-                             
                             path="/paymentReview" 
                             buttonText="Pay Now" 
                         />

@@ -16,20 +16,20 @@ const cardData = [
             <div className={styles.addressCard}>
                     <div className={styles.addressColumn}>
                         <h2>Downtown</h2>
-                        <p>XXX West Pender St.<br />
+                        <p>234 West Pender St.<br />
                         Vancouver, BC<br />
                         V6B 1V3<br />
-                        (604) XXX-XXXX<br />
+                        (604) 123-3456<br />
                         Mon - Fri 9am – 5pm*<br />
                         Sat - Sun 10am – 6pm*<br />
                         *Or until sell out occurs.</p>
                     </div>
                     <div className={styles.addressColumn}>
                         <h2>Mount Pleasant</h2>
-                        <p>XXX Main St.<br />
+                        <p>123 Main St.<br />
                         Vancouver, BC<br />
                         V4C 2V6<br />
-                        (604) XXX-XXXX<br />
+                        (604) 234-3456<br />
                         Mon - Fri 9am – 5pm*<br />
                         Sat - Sun 10am – 6pm*<br />
                         *Or until sell out occurs.</p>

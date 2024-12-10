@@ -45,3 +45,9 @@
     display: flex;
     gap: 1rem;
 }
+
+@media (max-width: 768px) {
+    .secondHalfInput input {
+        width: auto;
+    }
+}

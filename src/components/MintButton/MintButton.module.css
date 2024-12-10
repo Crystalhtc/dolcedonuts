@@ -8,7 +8,7 @@
 
 .button .buttonLink { 
     display: block; 
-    width: 100%;
+    width: auto;
     padding: 1rem;
     background-color: var(--mint);
     color: var(--brown);
